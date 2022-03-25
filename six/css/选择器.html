@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择器</title>
+  <style>
+    ul {
+
+    }
+    li {
+      width: 100px;
+      height: 100px;
+    }
+    p~li {
+      color: red;
+    }
+    li:first-of-type {
+      color: yellow;
+    }
+    li:last-of-type {
+      color: purple;
+    }
+    p:only-of-type {
+      color: blue;
+    }
+    li:nth-of-type(4) {
+      color:aqua;
+      box-shadow: 2px 2px 2px 2px red ;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div>
+      <ul>
+        <p>1</p>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+      <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+      <ul>
+        <p>1</p>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      @keyframes rotate {
+        /* from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(180deg);
+        } */
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      #box {
+        /* width: 100px; */
+        height: 100px;
+        background-color: aqua;
+        /* animation: rotate 2s linear; */
+      }
+      @media screen and (min-width: 1920px) {
+        #box {
+          width: 1800px;
+        }
+      }
+
+      @media screen and (min-width: 600px) and (max-width: 1920px) {
+        #box {
+          width: 90%;
+        }
+      }
+
+      @media screen and (min-width: 375px) and (max-width: 600px) {
+        #box {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "flow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-flow": "^7.16.7",
+    "flow-bin": "^0.170.0"
+  },
+  "dependencies": {
+    "flow-remove-types": "^2.170.0"
+  }
+}

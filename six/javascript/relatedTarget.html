@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer" style="height: 50px; width: 50px; border: 1px solid black">
+      <div
+        id="inner"
+        style="height: 25px; width: 25px; border: 1px solid black"
+      ></div>
+    </div>
+    <script>
+      var inner = document.getElementById('inner')
+      inner.addEventListener(
+        'mouseover',
+        function (event) {
+          console.log(
+            'mouseover进入' + event.target.id + ' 离开' + event.relatedTarget.id
+          )
+        },
+        false
+      )
+      inner.addEventListener('mouseenter', function (event) {
+        console.log('mouseenter进入' + event.target.id + ' 离开' + event.relatedTarget.id)
+      })
+      inner.addEventListener('mouseout', function (event) {
+        console.log('mouseout离开' + event.target.id + ' 进入' + event.relatedTarget.id)
+      })
+      inner.addEventListener('mouseleave', function (event) {
+        console.log('mouseleave离开' + event.target.id + ' 进入' + event.relatedTarget.id)
+      })
+      
+    </script>
+  </body>
+</html>

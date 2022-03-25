@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 2000px;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        padding: 100px;
+        border: 1px solid rebeccapurple;
+      }
+      #box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body onmousedown="showCoords(event)">
+    <div id="box">
+      事件
+      <p>hello</p>
+      <input type="text" id="my-input" />
+    </div>
+
+    <script>
+      const box = document.getElementById('box')
+
+      const handle = function ($event) {
+        // 阻止捕获和冒泡事件
+        // $event.stopPropagation()
+        console.log($event)
+        console.log($event.composedPath())
+      }
+
+      box.addEventListener('click', handle, true) // 捕获，从上往下
+      // box.addEventListener('click', handle, false) // 冒泡，从目标向外
+
+      // box.onclick = handle
+
+      var input = document.getElementById('my-input')
+      input.addEventListener('keypress', checkName, false)
+
+      function checkName(e) {
+        if (e.charCode < 97 || e.charCode > 122) {
+          e.preventDefault()
+        }
+      }
+
+      var p = document.querySelector('p')
+      p.addEventListener(
+        'click',
+        function (e) {
+          console.log(e.offsetX)
+          console.log(e.offsetY)
+        },
+        false
+      )
+
+      // var previousX
+      // var previousY
+      // var previousT
+
+      // window.addEventListener('mousemove', function (event) {
+      //   if (
+      //     previousX !== undefined &&
+      //     previousY !== undefined &&
+      //     previousT !== undefined
+      //   ) {
+      //     var deltaX = event.screenX - previousX
+      //     var deltaY = event.screenY - previousY
+      //     var deltaD = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2))
+
+      //     var deltaT = event.timeStamp - previousT
+      //     console.log((deltaD / deltaT) * 1000)
+      //   }
+
+      //   previousX = event.screenX
+      //   previousY = event.screenY
+      //   previousT = event.timeStamp
+      // })
+    </script>
+  </body>
+  <script>
+    function showCoords(evt) {
+      console.log(
+        'clientX value: ' +
+          evt.clientX +
+          '\n' +
+          'clientY value: ' +
+          evt.clientY +
+          '\n'
+      )
+      console.log(
+        'screenX value: ' + evt.screenX + '\n',
+        'screenY value: ' + evt.screenY + '\n'
+      )
+      console.log(
+        'pageX value: ' + evt.pageX + '\n',
+        'pageY value: ' + evt.pageY + '\n'
+      )
+    }
+  </script>
+</html>

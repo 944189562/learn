@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素隐藏</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background: red;
+        margin: 10px;
+      }
+      div:nth-child(1) {
+        display: none;
+      }
+      div:nth-child(2) {
+        visibility: hidden;
+      }
+      div:nth-child(3) {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+      }
+      div:nth-child(4) {
+        opacity: 0;
+      }
+      div:nth-child(5) {
+        clip-path: polygon(0, 0, 0, 0, 0, 0, 0, 0);
+      }
+      /*  */
+    </style>
+  </head>
+  <body>
+    <!--  -->
+    <div>隐藏1</div>
+    <div>隐藏2</div>
+    <div>隐藏3</div>
+    <div>隐藏4</div>
+    <div>隐藏5</div>
+  </body>
+</html>

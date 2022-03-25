@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单事件</title>
+  </head>
+  <body>
+    <select id="mySelect">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <input type="text" id="myInput" />
+
+    <form>
+      <input type="text" required oninvalid="console.log('invalid input')" />
+      <button type="submit">提交</button>
+    </form>
+
+    <script>
+      function inputHandler(e) {
+        console.log(e.target.value)
+      }
+
+      var mySelect = document.querySelector('#mySelect')
+      mySelect.addEventListener('input', inputHandler)
+
+      var input = document.getElementById('myInput')
+      input.addEventListener('input', myFunction, false)
+
+      function myFunction(e) {
+        console.log(e)
+      }
+    </script>
+  </body>
+</html>

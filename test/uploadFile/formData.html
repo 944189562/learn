@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <input type="file" id="file">
+    <button id="btn">上传</button>
+  </form>
+  
+  <div id="box"></div>
+  <script>
+    const file = document.getElementById('file')
+    const btn = document.getElementById('btn')
+    const box = document.getElementById('box')
+
+    btn.addEventListener('click', handleUpload)
+
+    function handleUpload() {
+      const fromData = new FormData()
+
+      fromData.append('attrName', this.file.files[0])
+
+      const xhr = new XMLHttpRequest()
+
+      xhr.open('post', '/upload')
+
+      xhr.upload.onprogress = function(evt) {
+        let result = (evt.loaded / evt.total * 100).toFixed(2)
+        console.log(result)
+      }
+
+      xhr.send(fromData)
+
+      xhr.onload = function() {
+        if(xhr.status === 200) {
+          let result = JSON.parse(xhr.responseText)
+          let img = document.createElement('img')
+          img.src = result.path
+
+          img.onload = function() {
+            box.appendChild(img)
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

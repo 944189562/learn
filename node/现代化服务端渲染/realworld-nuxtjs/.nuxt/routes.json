@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "component": "E:\\\\node\\\\现代化服务端渲染\\\\realworld-nuxtjs\\\\pages\\\\Home",
+        "_name": "_f36f7f50"
+      }
+    ],
+    "_name": "_51e86043"
+  }
+]

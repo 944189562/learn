@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素可见</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .target {
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        background: red;
+      }
+      .target-view {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector('.container')
+
+      function createTargets(container) {
+        // const wrap = document.createDocumentFragment()
+        const htmlString = new Array(100000)
+          .fill('<div class="target"></div>')
+          .join('')
+        container.innerHTML = htmlString
+      }
+
+      createTargets(container)
+
+      function isInViewPort(element) {
+        const viewWidth =
+          window.innerWidth || document.documentElement.clientWidth
+        const viewHeight =
+          window.innerHeight || document.documentElement.clientHeight
+        const { top, right, bottom, left } = element.getBoundingClientRect()
+
+        return (
+          top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight
+        )
+      }
+
+      // window.addEventListener('scroll', () => {
+      //   console.log('scroll!')
+      //   const targets = document.querySelectorAll('.target')
+
+      //   targets.forEach((element, index) => {
+      //     if (isInViewPort(element)) {
+      //       element.classList.add('target-view')
+      //     } else {
+      //       element.classList.remove('target-view')
+      //     }
+      //   })
+      // })
+
+      // const options = {
+      //   threshold: 1.0,
+      //   root: document.querySelector('.container')
+      // }
+      // const observer = new IntersectionObserver(getYellow, options)
+
+      // function getYellow(entries, observer) {
+      //   entries.forEach((entry) => {
+      //     const {
+      //       intersectionRatio
+      //     } = entry
+      //     if(intersectionRatio === 1 ) {
+      //       entry.target.classList.add('target-view')
+      //     } else {
+      //       entry.target.classList.remove('target-view')
+      //     }
+      //   })
+      // }
+
+      // const targets = document.querySelectorAll('.target')
+
+      // targets.forEach((element, index) => {
+      //   observer.observe(element)
+      // })
+    </script>
+  </body>
+</html>

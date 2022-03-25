@@ -1,0 +1,58 @@
+[
+  {
+    "name": "404",
+    "path": "/404",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\404.vue",
+    "chunkName": "pages/404",
+    "_name": "_31a0319a"
+  },
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_425e7b70"
+  },
+  {
+    "path": "/user",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\user.vue",
+    "chunkName": "pages/user",
+    "children": [
+      {
+        "name": "user",
+        "path": "",
+        "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\user\\\\index.vue",
+        "chunkName": "pages/user/index",
+        "_name": "_ef2fdabc"
+      },
+      {
+        "name": "user-one",
+        "path": "one",
+        "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\user\\\\one.vue",
+        "chunkName": "pages/user/one",
+        "_name": "_65b85c36"
+      },
+      {
+        "name": "user-id",
+        "path": ":id",
+        "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\user\\\\_id.vue",
+        "chunkName": "pages/user/_id",
+        "_name": "_0ebe558a"
+      }
+    ],
+    "_name": "_e3143440"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_02eec5e6"
+  },
+  {
+    "name": "custom",
+    "path": "*",
+    "component": "E:\\\\node\\\\现代化服务端渲染\\\\nuxt-demo\\\\pages\\\\404.vue",
+    "_name": "_31a0319a"
+  }
+]
