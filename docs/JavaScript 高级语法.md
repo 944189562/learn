@@ -40,6 +40,12 @@
 > 0.1+0.2 !== 0.3
 > ```
 >
+> ```js
+> 1 => number -> 8byte
+> 8byte => 2**64
+> js引擎 V8 中 kSmiMinValue => 0 ~ 2**32 -1, 小的数字在V8 中成为Sim，小数字 2**32
+> ```
+>
 > 
 
 ### 浏览器工作原理
@@ -232,6 +238,8 @@ Array.prototype.myFilter = function(fn) {
 
 ### 规则一：默认绑定
 
+独立函数调用，函数没有绑定this，直接调用
+
 ```javascript
 // 默认绑定：独立函数调用
 function foo() {
@@ -292,6 +300,8 @@ obj.eating() // obj 隐式绑定
 
 ### 规则三：显示调用
 
+通过call、apply 绑定 this 直接运行，bind绑定 this 返回一个新函数 
+
 1. call 直接运行
 2. apply 直接运行
 
@@ -328,7 +338,7 @@ bar()
 - 使用new 关键字来调用函数，执行如下操作：
   1. 创建一个新对象 obj
   2. obj的原型对象[[Prototype]] 指向 构造函数的原型对象 prototype
-  3. 构造函数this绑定 obj，并执行返回 result
+  3. 使用指定参数调用构造函数，并将 this 绑定到新创建的对象
   4. 判断result ，result 是对象返回result，否则返回 obj
 
 ```javascript
@@ -339,5 +349,418 @@ function Person(name, age) {
 
 var p1 = new Person('jz', 18)
 console.log(p1)
+// new 的实现
+function createNew(fn, ...args) {
+    const obj = {}
+    obj.__proto__ = fn.prototype
+    const result = fn.prototype.contructor.apply(obj, args)
+    return typeof result === 'object' ? result : obj
+}
+```
+
+### this 补充
+
+思考 js 原生方法的内部函数调用如何实现，例如setTimeout中 fn 的为独立函数调用，onclick 内部绑定 dom对象
+
+```javascript
+// 1. setTimeout，内部直接调用fn，独立调用函数，fn 的this 执行window
+setTimeout(fn, 2000)
+
+```
+
+### 规则优先级
+
+1. 默认绑定优先级最低
+
+2. 显示绑定优先级高于隐式绑定
+
+   1. ```
+      // 隐式绑定
+      var obj = {
+      	name: 'obj',
+      	foo() {
+      		console.log(this)
+      	}
+      }
+      
+      obj.foo()
+      obj.foo.call('abc')
+      
+      // bind
+      function foo() {
+      	console.log(this)
+      }
+      
+      var obj = {
+      	name: 'jz',
+      	foo: foo.bind('aaa')
+      }
+      
+      obj.foo() // String {'aaa'}
+      ```
+
+3. new 优先级高于隐式绑定
+
+4. new 优先级高于显示绑定
+
+```
+function foo() {
+	console.log(this)
+}
+
+var bar = foo.bind('aaa')
+
+var obj = new bar()
+obj // foo {}
+```
+
+
+
+> 优先级：默认 < 隐式 < 显示 < new
+
+结论：new 关键字不能和call、apply 一是使用
+
+### this 规则之外 - 忽略显示绑定
+
+> apply/call/bind：当传入null/undefined 时，自动将this 绑定为全局对象
+
+```
+function foo() {
+	console.log(this)
+}
+
+foo.apply('aaa')
+// apply/call/bind：当传入null/undefined 时，自动将this 绑定为全局对象
+foo.apply(null)
+foo.apply(undefined)
+var bar = foo.bind(null)
+bar()
+```
+
+1. apply/call/bind：当传入null/undefined 时，自动将this 绑定为全局对象
+
+2. 间接函数引用
+
+   ```js
+   var obj1 = {
+   	name: 'obj1',
+   	foo() {
+   		console.log(this)
+   	}
+   }
+   
+   
+   // 间接引用
+   // 第一种情况
+   var obj2 = {
+   	name: 'obj2'
+   }
+   obj2.bar = obj1.foo
+   obj2.bar() // {name: 'obj2', bar: ƒ}
+   
+   // 第二种情况，这种写法会报错，js在解析时会解析成如下格式，导致报错，正确的写法是在对象定义结束后加分号
+   // 所以分号很重要，有些写法会导致解析错误
+   /**
+   var obj2 = {
+   	name: 'obj2'
+   }(obj2.bar = obj1.foo)()
+   */
+   // 错误写法
+   var obj2 = {
+   	name: 'obj2'
+   }
+   
+   (obj2.bar = obj1.foo)()
+   
+   // 正确写法
+   var obj2 = {
+   	name: 'obj2'
+   };
+   // 这种写法(...)() 是独立函数调用，this 指向window
+   (obj2.bar = obj1.foo)() 
+   ```
+
+3. 箭头函数(arrow function)
+
+   1. 箭头函数不绑定 this、arguments属性
+   2. 箭头函数不能作为构造函数来使用（和 new 一起使用，会抛出错误）
+   3. 箭头函数的 this，是上层作用域的this
+   4. 显示绑定不能改变箭头函数的 this
+
+   ```javascript
+   () => {}
+   
+   var nums = [1,2,3,4,5]
+   nums.forEach((item, index, array)=>{})
+   
+   // 简写
+   // 1. 函数只要一个参数 () 可以省略
+   nums.forEach(item => {
+       item % 2
+   })
+   // 2. 函数只返回一行代码 {} 可以省略
+   // 强调：并且它会默认将这行代码的执行结果作为返回值
+   nums.forEach(item => item % 2)
+   // 3. 箭头函数返回一个对象
+   var bar = () => ({name: 'jz'})
+   ```
+
+   ### 箭头函数 面试题
+
+   ```js
+   var name = "window";
+   
+   var person = {
+     name: "person",
+     sayName: function () {
+       console.log(this.name);
+     }
+   };
+   
+   function sayName() {
+     var sss = person.sayName;
+     sss(); // window 独立函数调用
+     person.sayName(); // person 隐式绑定
+     (person.sayName)(); // person 隐式绑定
+     (b = person.sayName)(); // window
+   }
+   
+   sayName();
+   ```
+
+   ```js
+   var name = 'window'
+   var person1 = {
+     name: 'person1',
+     foo1: function () {
+       console.log(this.name)
+     },
+     foo2: () => console.log(this.name),
+     foo3: function () {
+       return function () {
+         console.log(this.name)
+       }
+     },
+     foo4: function () {
+       return () => {
+         console.log(this.name)
+       }
+     }
+   }
+   
+   var person2 = { name: 'person2' }
+   
+   person1.foo1(); // person1 隐式绑定
+   person1.foo1.call(person2); // person2 显示绑定
+   
+   person1.foo2(); // window
+   person1.foo2.call(person2); // window
+   
+   person1.foo3()(); // window 独立函数调用
+   person1.foo3.call(person2)(); // window 独立函数调用
+   person1.foo3().call(person2); // person2 显示绑定
+   
+   person1.foo4()(); // person1
+   person1.foo4.call(person2)(); // person2
+   person1.foo4().call(person2); // person 1
+   ```
+
+   ```js
+   var name = 'window'
+   function Person (name) {
+     this.name = name
+     this.foo1 = function () {
+       console.log(this.name)
+     },
+     this.foo2 = () => console.log(this.name),
+     this.foo3 = function () {
+       return function () {
+         console.log(this.name)
+       }
+     },
+     this.foo4 = function () {
+       return () => {
+         console.log(this.name)
+       }
+     }
+   }
+   var person1 = new Person('person1')
+   var person2 = new Person('person2')
+   
+   person1.foo1() // person1 隐式绑定
+   person1.foo1.call(person2) // person2 显示绑定
+   
+   person1.foo2() // person1
+   person1.foo2.call(person2) // person1
+   
+   person1.foo3()() // window 独立函数调用
+   person1.foo3.call(person2)() // window 独立函数调用
+   person1.foo3().call(person2) // person2 显示绑定
+   
+   person1.foo4()() // person1
+   person1.foo4.call(person2)() // person2
+   person1.foo4().call(person2) // person1
+   ```
+
+   ```js
+   var name = 'window'
+   function Person (name) {
+     this.name = name
+     this.obj = {
+       name: 'obj',
+       foo1: function () {
+         return function () {
+           console.log(this.name)
+         }
+       },
+       foo2: function () {
+         return () => {
+           console.log(this.name)
+         }
+       }
+     }
+   }
+   var person1 = new Person('person1')
+   var person2 = new Person('person2')
+   
+   person1.obj.foo1()() // window 独立函数调用
+   person1.obj.foo1.call(person2)() // window 独立函数调用
+   person1.obj.foo1().call(person2) // person2 显式绑定
+   
+   person1.obj.foo2()() // obj
+   person1.obj.foo2.call(person2)() // person2
+   person1.obj.foo2().call(person2) // obj
+   ```
+
+   
+
+## 函数式编程
+
+### 实现apply、call、bind
+
+> **`Object` 构造函数将给定的值包装为一个新对象。**
+>
+> - 如果给定的值是 [`null`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) 或 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined), 它会创建并返回一个空对象。
+> - 否则，它将返回一个和给定的值相对应的类型的对象。
+> - 如果给定值是一个已经存在的对象，则会返回这个已经存在的值（相同地址）。
+>
+> apply/call/bind：当传入null/undefined 时，自动将this 绑定为全局对象
+
+```
+// apply 考虑边界值
+// window node 都有golbalThis全局对象
+// fn.apply(obj, [1, 2, 3])
+Function.prototype.myApply = function(thisArg, argArray = []) {
+	// 1. 获取需要被执行的函数
+	const fn = this
+	// 2. 处理绑定的thisArg，基本数据类型绑定this
+	const ctx = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : golbalThis
+	// const args = Array.from(arguments).slice(1)
+	// 3. ctx 添加 fn 属性，执行 隐式绑定 this
+	const key = Symbol('key')
+	ctx[key] = fn
+	const res = ctx[key](...argArray)
+	delete ctx[key]
+	// 4. 返回 res
+	return res
+}
+
+// call
+// fn.call(obj, 1, 2, 3)
+Function.prototype.myCall = function(thisArg, ...args) {
+	// 获取需要被执行的函数
+	const fn = this
+	// 处理绑定的thisArg
+	const ctx = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : golbalThis
+	// const args = Array.from(arguments).slice(1)
+	const key = Symbol('key')
+	ctx[key] = fn
+	const res = ctx[key](...args)
+	delete ctx[key]
+	return res
+}
+
+function foo(num) {
+	console.log(num, this)
+}
+
+var obj = {
+	name: 'jz'
+}
+
+foo.myApply(obj)
+
+// bind
+// fn.bind(obj, ...args) 返回一个新函数，可以 new
+Function.prototype.myBind = function(thisArg, ...args) {
+	// 1. 获取到需要调用函数
+	const fn = this
+	const ctx = (thisArg !== null && thisArg !== undefined) ? Object(thisArg) : globalThis
+	const key = Symbol('key')
+	ctx[key] = fn
+	function proxyFn(...args1) {
+		// 判断当前的 this.__proto__ 是否指向 Fn.prototype
+		// this instanceof Fn 为true，说明new Fn(...args)
+		if(this instanceof Fn) {
+			this[key] = fn
+            const res = this[key](...args, ...args1)
+            delete this[key]
+            return res
+		} else {
+            const res = ctx[key](...args, ...args1)
+            delete ctx[key]
+            return res
+		}
+		
+	}
+	proxyFn.prototype = fn.prototype
+	return proxyFn
+}
+
+function foo(name, age) {
+	this.name = name
+	this.age = age
+	console.log(this)
+}
+
+```
+
+
+
+### arguments
+
+- arguments 是一个 对应于传递给 函数的参数 的 类数组（array like）对象
+- 箭头函数没有 arguments
+
+#### 常见的arguments的操作：
+
+1. 获取参数的长度 arguments.length
+2. 根据索引值获取参数 arguments[0]
+3. 获取到当前函数 arguments.callee
+
+#### 类数组转数组
+
+```js
+// 1. 使用 for
+var newArr = []
+for(var i =0;i<arguments.length;i++){
+	newArr.push(arguments[i])
+}
+
+// 2.
+var newArr2 = Array.prototype.slice.call(arguments)
+// 模拟 slice 的实现
+Array.prototype.slice = function(start = 0, end = this.length){
+	let arr = this
+	let newArr = []
+	for(let i = start ; i< end; i++) {
+		newArr.push(arr[i])
+	}
+	return newArr
+}
+// 3.
+var newArr3 = Array.from(arguments)
+// 4
+var newArr4 = [...arguments]
 ```
 
