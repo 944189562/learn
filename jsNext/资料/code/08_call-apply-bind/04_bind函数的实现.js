@@ -25,6 +25,10 @@ function foo() {
   return 20
 }
 
+var fn = () => {
+
+}
+
 function sum(num1, num2, num3, num4) {
   console.log(num1, num2, num3, num4)
 }
