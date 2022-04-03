@@ -39,7 +39,7 @@ class HYEventBus {
 
 const eventBus = new HYEventBus()
 
-// main.js
+// index.js
 eventBus.on("abc", function() {
   console.log("监听abc1", this)
 }, {name: "why"})

@@ -6,7 +6,7 @@ function foo() {
   })
 }
 
-// main.js
+// index.js
 const fooPromise = foo()
 // then方法传入的回调函数两个回调函数:
 // > 第一个回调函数, 会在Promise执行resolve函数时, 被回调

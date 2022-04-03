@@ -206,7 +206,6 @@ var Person = /*#__PURE__*/ (function () {
 
 var Student = /*#__PURE__*/ (function (_Person) {
   _inherits(Student, _Person);
-debugger
   var _super = _createSuper(Student);
 
   function Student(name, age, sno) {
@@ -217,6 +216,7 @@ debugger
     // Person 不能当成一个普通的函数去调用
     // Person.call(this, name, age)
     _this = _super.call(this, name, age);
+    console.log('_this => ', _this)
     _this.sno = sno;
     return _this;
   }

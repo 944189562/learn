@@ -22,7 +22,7 @@ function requestData(url, successCallback, failtureCallback) {
   }, 3000);
 }
 
-// main.js
+// index.js
 requestData("kobe", (res) => {
   console.log(res)
 }, (err) => {

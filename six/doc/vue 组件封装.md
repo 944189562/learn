@@ -9,7 +9,7 @@
 
 ## 2. 原型快速开发 npm install -g @vue/cli-service-global
 1. vue serve 不指定参数默认会在当前目录找一下入口文件
->1.1 main.js, index.js, App.vue, app.vue
+>1.1 index.js, index.js, App.vue, app.vue
 
 >1.2 可以指定要加载的组件 vue serve xxx.vue
 
