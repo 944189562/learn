@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text">
+    <button>Cancel</button>
+</div>
+<!--<script src="debounce.js"></script>-->
+<script src="throttle.js"></script>
+<script>
+  const inputEl = document.querySelector('input')
+  const btn = document.querySelector('button')
+  let counter = 0
+
+  const inputChange = function (evt) {
+    console.log(`发送了${++counter}次网络请求！`, this)
+    return evt.target.value
+  }
+  // 1. debounce
+  // const debounceChange = debounce(inputChange, 2000, false, (res) => {
+  //   console.log(`返回值: ${res}`)
+  // })
+  //
+  // const tempCallback = function (evt) {
+  //   debounceChange.call(this, evt).then((res) => {
+  //     console.log('Promise: ', res)
+  //   })
+  // }
+  //
+  // inputEl.oninput = tempCallback
+
+  // inputEl.oninput = debounce(inputChange, 1000, true, (res) => {
+  //   console.log('result => ', res)
+  // })
+
+  // 2. throttle
+  const throttleChange = throttle(inputChange, 3000, {
+    leading: false,
+    trailing: true
+  })
+
+  inputEl.oninput = throttleChange
+</script>
+</body>
+</html>

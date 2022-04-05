@@ -6,7 +6,7 @@ const obj = {
   friend: {
     name: "kobe"
   },
-  foo: function() {
+  foo: function () {
     console.log("foo function")
   },
   [s1]: "abc",

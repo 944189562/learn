@@ -723,7 +723,7 @@ bar()
 >
 > apply/call/bind：当传入null/undefined 时，自动将this 绑定为全局对象
 
-```
+```js
 // apply 考虑边界值
 // window node 都有golbalThis全局对象
 // fn.apply(obj, [1, 2, 3])
@@ -778,7 +778,7 @@ Function.prototype.myBind = function(thisArg, ...args) {
 	function proxyFn(...args1) {
 		// 判断当前的 this.__proto__ 是否指向 Fn.prototype
 		// this instanceof Fn 为true，说明new Fn(...args)
-		if(this instanceof Fn) {
+		if(this instanceof proxyFn) {
 			this[key] = fn
             const res = this[key](...args, ...args1)
             delete this[key]
@@ -5449,5 +5449,244 @@ module.exports = {
 }
 
 
+```
+
+
+
+### 手写
+
+#### 1. 事件总线 eventBus
+
+```js
+class JZEventBus {
+  constructor() {
+    this.eventBus = {}
+  }
+
+  on(eventName, eventCb, thisArg) {
+    let handles = this.eventBus[eventName]
+    if (!handles) {
+      handles = []
+      this.eventBus[eventName] = handles
+    }
+    handles.push({
+      eventCb,
+      thisArg
+    })
+  }
+
+  emit(eventName, ...payload) {
+    const handlers = this.eventBus[eventName]
+    if (!handlers) return
+    handlers.forEach(handler => handler.eventCb.apply(handler.thisArg, payload))
+  }
+
+  off(eventName, eventCb) {
+    let handlers = this.eventBus[eventName]
+    const newHandlers = [...handlers]
+    for (const handler of newHandlers) {
+      if (handler.eventCb === eventCb) {
+        const index = handlers.indexOf(handler)
+        handlers.splice(index, 1)
+      }
+    }
+  }
+}
+
+const eventBus = new JZEventBus()
+
+// index.js
+eventBus.on("abc", function () {
+  console.log("监听abc1", this)
+}, {name: "jz"})
+
+const handleCallback = function () {
+  console.log("监听abc2", this)
+}
+eventBus.on("abc", handleCallback, {name: "jz"})
+
+// utils.js
+eventBus.emit("abc", 123)
+
+// 移除监听
+eventBus.off("abc", handleCallback)
+eventBus.emit("abc", 123)
+```
+
+
+
+#### 2. 防抖 debounce
+
+```js
+function debounce(fn, delay, immediate = false, callback) {
+  let timer = null
+  let isInvoke = false
+
+  const _debounce = function (...args) {
+    console.log(args)
+    return new Promise(resolve => {
+      if (timer) clearTimeout(timer)
+
+      if (immediate && !isInvoke) {
+        isInvoke = true
+        const result = fn.apply(this, args)
+        callback && callback(result)
+        resolve(result)
+      } else {
+        timer = setTimeout(() => {
+          const result = fn.apply(this, args)
+          callback && callback(result)
+          resolve(result)
+          isInvoke = false
+        }, delay)
+      }
+    })
+  }
+
+  _debounce.cancel = function () {
+    if (timer) clearTimeout(timer)
+    timer = null
+    isInvoke = false
+  }
+
+  return _debounce
+}
+```
+
+
+
+#### 3. 节流 throttle
+
+```js
+function throttle(fn, wait, options = {leading: false, trailing: false}) {
+  let lastTime = 0
+  const {leading, trailing} = options
+  let timer = null
+
+  const _throttle = function (...args) {
+    const nowTime = new Date().getTime()
+    if (!lastTime && !leading) lastTime = nowTime
+    const remainTime = wait - (nowTime - lastTime)
+    if (remainTime <= 0) {
+      console.log('remainTIme')
+      if (timer) {
+        clearTimeout(time)
+        timer = null
+      }
+      fn.apply(this, args)
+      lastTime = nowTime
+      return
+    }
+
+    if (trailing && !timer) {
+      timer = setTimeout(() => {
+        console.log('timer')
+        timer = null
+        fn.apply(this, args)
+        lastTime = !leading ? 0 : new Date().getTime()
+      }, remainTime)
+    }
+  }
+
+  return _throttle
+}
+```
+
+
+
+#### 4. 深拷贝 deepClone
+
+```js
+function isObject(value) {
+  const type = typeof value
+  return value !== null && type === 'object'
+}
+
+function deepClone(originValue, map = new WeakMap()) {
+  if (originValue instanceof Set) {
+    return new Set([...originValue])
+  }
+
+  if (originValue instanceof Map) {
+    return new Map([...originValue])
+  }
+
+  if (typeof originValue === 'symbol') {
+    return Symbol(originValue.description)
+  }
+
+  if (typeof originValue === 'function') {
+    return originValue
+  }
+
+  if (!isObject(originValue)) {
+    return originValue
+  }
+
+  if (map.has(originValue)) {
+    return map.get(originValue)
+  }
+
+  const originTypeIsArray = Array.isArray(originValue)
+  const newObject = originTypeIsArray ? [] : {}
+  map.set(originValue, newObject)
+
+  if (originTypeIsArray) {
+    for (const value of originValue) {
+      newObject.push(deepClone(value, map))
+    }
+  } else {
+    for (const key in originValue) {
+      if (originValue.hasOwnProperty(key)) {
+        newObject[key] = deepClone(originValue[key], map)
+      }
+    }
+  }
+
+  const sKeys = Object.getOwnPropertySymbols(originValue)
+  for (const sKey of sKeys) {
+    newObject[sKey] = deepClone(originValue[sKey], map)
+  }
+
+  return newObject
+}
+
+// 测试代码
+let s1 = Symbol("aaa")
+let s2 = Symbol("bbb")
+
+const obj = {
+  name: "jz",
+  age: 18,
+  friend: {
+    name: "james",
+    address: {
+      city: "广州"
+    }
+  },
+  // 数组类型
+  hobbies: ["abc", "cba", "nba"],
+  // 函数类型
+  foo: function (m, n) {
+    console.log("foo function")
+    console.log("100代码逻辑")
+    return 123
+  },
+  // Symbol作为key和value
+  [s1]: "abc",
+  s2: s2,
+  // Set/Map
+  set: new Set(["aaa", "bbb", "ccc"]),
+  map: new Map([["aaa", "abc"], ["bbb", "cba"]])
+}
+
+obj.info = obj
+
+const newObj = deepClone(obj)
+console.log(newObj === obj)
+obj.name = 'jz'
+obj.age = 20
+console.log(newObj)
+console.log(newObj.info.info.info)
 ```
 

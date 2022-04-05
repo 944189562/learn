@@ -3,8 +3,6 @@ function isObject(value) {
   return (value !== null) && (valueType === "object" || valueType === "function")
 }
 
-
-
 function deepClone(originValue, map = new WeakMap()) {
   // 判断是否是一个Set类型
   if (originValue instanceof Set) {
@@ -30,6 +28,7 @@ function deepClone(originValue, map = new WeakMap()) {
   if (!isObject(originValue)) {
     return originValue
   }
+
   if (map.has(originValue)) {
     return map.get(originValue)
   }

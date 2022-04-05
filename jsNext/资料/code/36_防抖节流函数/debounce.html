@@ -13,8 +13,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
   <!-- <script src="./01_debounce-v1-基本实现.js"></script> -->
-  <!-- <script src="./03_debounce-v3-立即执行.js"></script> -->
-  <!-- <script src="./04_debounce-v4-取消功能.js"></script> -->
+<!--   <script src="./03_debounce-v3-立即执行.js"></script>-->
+<!--   <script src="./04_debounce-v4-取消功能.js"></script>-->
   <script src="./05_debounce-v5-函数返回值.js"></script>
   <script>
     const inputEl = document.querySelector("input")
@@ -29,16 +29,16 @@
 
     // 防抖处理
     // inputEl.oninput = _.debounce(inputChange, 2000)
-    const debounceChange = debounce(inputChange, 3000, false, (res) => {
-      console.log("拿到真正执行函数的返回值:", res)
-    })
+    const debounceChange = debounce(inputChange, 3000, false)
     const tempCallback = () => {
+      console.log(this)
       debounceChange().then(res => {
         console.log("Promise的返回值结果:", res)
       })
     }
     inputEl.oninput = tempCallback
-    // inputEl.oninput = inputChange
+
+    // inputEl.oninput = debounce(inputChange, 3000, true)
 
     // 节流处理
     // inputEl.oninput = _.throttle(inputChange, 2000)
