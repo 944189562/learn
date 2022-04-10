@@ -1,0 +1,25 @@
+$fontSize: 12px;
+$bgColor: red;
+
+// @mixin
+// @include
+@mixin bordered($fontSize) {
+  font-size: $fontSize;
+  border: 1px solid #000;
+}
+
+.wrapper {
+  background: lighten($bgColor, 40%);
+
+  .nav {
+    @include bordered($fontSize)
+  }
+
+  .content {
+    @include bordered($fontSize + 2px);
+
+    &:hover {
+      background: $bgColor
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import './02-plugin.css';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    box-shadow: 0 0 0 10px #000 inset;
+}
+
+::placeholder {
+    color: gray;
+}
+
+.image {
+    /*background-image: url(image@1x.png);*/
+}
+@media (min-resolution: 2dppx) {
+    .image {
+        /*background-image: url(image@2x.png);*/
+    }
+}
+
+:root{
+    --mainColor: red;
+}
+
+a {
+    color: var(--mainColor)
+}

@@ -1,5 +1,7 @@
-const foo = 'foo'
-
+let foo = 'foo'
+setTimeout(() => {
+  foo = 'bar'
+}, 1000)
 // 第一种方式
 // export default foo
 

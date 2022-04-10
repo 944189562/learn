@@ -1,0 +1,16 @@
+@fontSize: 12px;
+@bgColor: red;
+
+.wraper {
+  background: lighten(@bgColor, 40%);
+
+  .nav {
+    font-size: @fontSize;
+  }
+  .content {
+    font-size: @fontSize + 2px;
+    &:hover {
+      background: @bgColor
+    }
+  }
+}

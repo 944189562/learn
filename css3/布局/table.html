@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table 布局</title>
+    <style>
+        .table {
+            width: 800px;
+            height: 300px;
+            display: table;
+        }
+        .table-row {
+            display: table-row;
+        }
+        .table-cell {
+            display: table-cell;
+            background: red;
+            vertical-align: middle;
+        }
+        .table-cell:first-child {
+            width: 200px;
+        }
+        .table-cell:last-child {
+            background: blue
+        }
+    </style>
+</head>
+<body>
+  <div class="table">
+      <div class="table-row">
+          <div class="table-cell">left</div>
+          <div class="table-cell">right</div>
+      </div>
+  </div>
+</body>
+</html>

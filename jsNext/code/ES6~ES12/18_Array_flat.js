@@ -11,3 +11,11 @@ const mewMessages = messages.flatMap((message) => {
 })
 
 console.log(mewMessages) // [ 'Hello', 'World', 'my', 'name', 'is', 'jz' ]
+
+const nums = [[1, 2], [3, 4], [5, 6]]
+
+const newNums = nums.flatMap((value) => {
+  return value.map(val => val += 1)
+})
+
+console.log(newNums)

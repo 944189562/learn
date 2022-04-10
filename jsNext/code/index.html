@@ -8,6 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./useStrict.js"></script>
+<div class="box">
+    <input type="text">
+    <button>Cancel</button>
+</div>
+<!--    <script src="./useStrict.js"></script>-->
+<!--<script src="debounce.js"></script>-->
+<script src="throttle.js"></script>
+<script>
+  let inputEl = document.querySelector('input')
+
+  inputChange = function (evt) {
+    console.log('change', this, evt.target.value)
+  }
+
+  // inputEl.oninput = debounce(inputChange, 1000, false)
+  inputEl.oninput = throttle(inputChange, 2000, {leading: false, trailing: true})
+</script>
 </body>
 </html>

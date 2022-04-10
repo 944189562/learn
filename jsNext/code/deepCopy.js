@@ -148,6 +148,68 @@ function deepClone(originValue, map = new WeakMap()) {
   return newObject
 }
 
+// // 测试代码
+// let s1 = Symbol("aaa")
+// let s2 = Symbol("bbb")
+//
+// const obj = {
+//   name: "jz",
+//   age: 18,
+//   friend: {
+//     name: "james",
+//     address: {
+//       city: "广州"
+//     }
+//   },
+//   // 数组类型
+//   hobbies: ["abc", "cba", "nba"],
+//   // 函数类型
+//   foo: function (m, n) {
+//     console.log("foo function")
+//     console.log("100代码逻辑")
+//     return 123
+//   },
+//   // Symbol作为key和value
+//   [s1]: "abc",
+//   s2: s2,
+//   // Set/Map
+//   set: new Set(["aaa", "bbb", "ccc"]),
+//   map: new Map([["aaa", "abc"], ["bbb", "cba"]])
+// }
+//
+// obj.info = obj
+
+// const newObj = deepClone(obj)
+// console.log(newObj === obj)
+// obj.name = 'jz'
+// obj.age = 20
+// console.log(newObj)
+// console.log(newObj.info.info.info)
+
+function deepCopy(originValue, map = new WeakMap()) {
+  const originType = typeof originValue
+  if (!originType !== 'object' && originValue !== null) {
+    return originValue
+  }
+
+  const originTypeIsArray = Array.isArray(originValue)
+  const newObject = originTypeIsArray ? [] : {}
+  map.set(originValue, newObject)
+  if (originTypeIsArray) {
+    for (const value of originValue) {
+      newObject.push(deepCopy(value, map))
+    }
+  } else {
+    for (const key in originValue) {
+      if (originValue.hasOwnProperty(key)) {
+        newObject[key] = deepCopy(originValue[key], map)
+      }
+    }
+  }
+
+  return newObject
+}
+
 // 测试代码
 let s1 = Symbol("aaa")
 let s2 = Symbol("bbb")
@@ -179,7 +241,7 @@ const obj = {
 
 obj.info = obj
 
-const newObj = deepClone(obj)
+const newObj = deepCopy(obj)
 console.log(newObj === obj)
 obj.name = 'jz'
 obj.age = 20

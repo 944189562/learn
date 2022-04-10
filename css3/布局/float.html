@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Float 布局</title>
+    <style>
+        .container {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .left {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: red;
+        }
+        .right {
+            width: 200px;
+            height: 100%;
+            float: right;
+            background-color: red;
+        }
+        .main {
+            background: blue;
+            height: 100%;
+            margin-left: 200px;
+        }
+        @media (max-width: 640px) {
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">left</div>
+    <div class="right">right</div>
+    <div class="main">main</div>
+</div>
+
+</body>
+</html>

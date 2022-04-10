@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-E5Sj1saJVFNzWWK3YIJB4LEDEEVEGaOdfmCprPDkfWUo+xkb6Ep52Q1TMEtgcFwi"
+            crossorigin="anonymous"></script>
+    <style>
+        form {
+            margin-top: 100px;
+        }
+
+        #result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form class="col-4 offset-3">
+    <div class="form-group row">
+        <label for="name" class="col-2 col-form-label">姓名</label>
+        <div class="col-10">
+            <input type="text" class="form-control" id="name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="password" class="col-sm-2 col-form-label">密码</label>
+        <div class="col-10">
+            <input type="password" class="form-control" id="password">
+        </div>
+    </div>
+    <div id="result" class="alert alert-danger"></div>
+    <div class="form-group row">
+        <button type="button" class="btn btn-primary offset-10">提交</button>
+    </div>
+</form>
+<script>
+  const submitEl = document.querySelector('button[type=button]')
+  const resultEl = document.querySelector('#result')
+
+  submitEl.onclick = () => {
+    if (!password.value) {
+      resultEl.textContent = '密码不能为空！'
+      resultEl.style.display = 'block'
+    } else {
+      resultEl.textContent = ''
+      resultEl.style.display = 'none'
+    }
+  }
+</script>
+</body>
+</html>

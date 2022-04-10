@@ -1,4 +1,5 @@
-function componse(...fns) {
+"use strict"
+function compose(...fns) {
   const length = fns.length
   for (let i = 0; i < length; i++) {
     if (typeof fns[i] !== 'function') {
@@ -19,7 +20,7 @@ function componse(...fns) {
   }
 }
 
-console.log(componse(add, square, double)(1))
+console.log(compose(add, square, double)(1))
 
 function double(m) {
   return m * 2
@@ -32,3 +33,11 @@ function square(n) {
 function add(num) {
   return num + 2
 }
+
+// 从左往右执行
+const compose = (...fns) => value => fns.reduce((pre, cur) => cur(pre), value)
+// 从右往左执行
+const pipe = (...fns) => value => fns.reduceRight((pre, cur) => cur(pre), value)
+
+console.log(compose(add, square, double)(1))
+console.log(pipe(add, square, double)(1))

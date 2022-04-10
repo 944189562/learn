@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/node/node_base/cli-test/demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/node/node_base/cli-test/demo1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/node/node_base/cli-test/demo3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/node/课堂/code/coderhub" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/six/cli/generator-j-vue" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/six/cli/zce-gulp-demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/six/react/my-app" vcs="Git" />
@@ -12,6 +16,7 @@
     <mapping directory="$PROJECT_DIR$/six/vue/vue-test" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/six/vue/vuex-cart-demo-template" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/six/vue/vuex-sample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test/demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/test/h5" vcs="Git" />
   </component>
 </project>

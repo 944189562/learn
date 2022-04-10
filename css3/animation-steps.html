@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 102px;
+            height: 148px;
+            margin: 0 auto;
+            background: url('./walk-right.png') no-repeat;
+            background-size: auto 100%;
+            /*animation: run 1s steps(1) infinite;*/
+            animation-name: run;
+            animation-duration: 1s;
+            animation-timing-function: steps(1);
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes run {
+            0%{
+                background-position: 0 0;
+            }
+            16%{
+                background-position: -102px 0;
+            }
+            32%{
+                background-position: -204px 0;
+            }
+            48%{
+                background-position: -306px 0;
+            }
+            64%{
+                background-position: -408px 0;
+            }
+            80%{
+                background-position: -510px 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            animation: run 5s linear;
+            /*animation-direction: reverse;*/
+            /*animation-fill-mode: forwards;*/
+            /*animation-iteration-count: 2;*/
+            /*animation-play-state: paused;*/
+            background: red;
+        }
+
+        @keyframes run {
+            0% {
+                width: 100px;
+            }
+            50% {
+                width: 800px;
+            }
+            100% {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

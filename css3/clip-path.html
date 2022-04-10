@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip-path</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            background: url('./Couple wallpaper.jpg') no-repeat center center/cover;
+            /*background: url('./Couple wallpaper.jpg') no-repeat center center/contain;*/
+
+            /*background: url('./Couple wallpaper.jpg') no-repeat;*/
+            /* 矩形 */
+            /*clip-path: inset(100px 50px);*/
+            clip-path: circle(50px at 100px 100px);
+            /*clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);*/
+
+            transition: cilp-path .4s ease;
+        }
+
+        .box:hover {
+            clip-path: circle(80px at 100px 100px);
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

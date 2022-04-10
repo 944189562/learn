@@ -1,0 +1,26 @@
+$fontSize: 12px;
+$bgColor: red;
+
+// % 不会被编译
+// . 会被编译
+%bordered {
+  font-size: $fontSize;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.wrapper {
+  background: lighten($bgColor, 40%);
+
+  .nav {
+    @extend %bordered;
+  }
+
+  .content {
+    @extend %bordered;
+
+    &:hover {
+      background: $bgColor
+    }
+  }
+}

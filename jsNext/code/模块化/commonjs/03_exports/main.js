@@ -7,7 +7,7 @@
 //   console.log(obj.name)
 //   obj.name = 'jz'
 // }, 2000)
-// console.log(module.paths)
+console.log(module.paths)
 
 const name = require('./foo')
 

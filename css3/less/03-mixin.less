@@ -1,0 +1,25 @@
+@fontSize: 12px;
+@bgColor: red;
+
+// .bordered {} 会被编译
+// .bordered() {} 不会被编译
+.bordered(@fontSize) {
+  font-size: @fontSize;
+  border: 1px solid #000;
+}
+
+.wrapper {
+  background: lighten(@bgColor, 40%);
+
+  .nav {
+    .bordered(@fontSize);
+  }
+
+  .content {
+    .bordered(@fontSize + 2px);
+
+    &:hover {
+      background: @bgColor
+    }
+  }
+}

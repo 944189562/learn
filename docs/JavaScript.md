@@ -15,10 +15,10 @@
 > 43 / 2 商 21 余数 1
 > 21 / 2 商 10 余数 1
 > 10 / 2 商 5  余数 0
->  5 / 2 商 2  余数 1
->  2 / 2 商 1  余数 0
->  1 / 2 商 0  余数 1
->  从后往前读取 43 => 101011
+> 5 / 2 商 2  余数 1
+> 2 / 2 商 1  余数 0
+> 1 / 2 商 0  余数 1
+> 从后往前读取 43 => 101011
 > ```
 >
 > ###### 10进制小数转2进制是乘2取1
@@ -35,7 +35,8 @@
 > 0.8*2=1.6......1
 > 0.6*2=1.2......1
 > ......
-> 得到整数依次是 0,0,0,1,1,0,0,1,1......
+> 
+> 从前往后得到整数依次是 0,0,0,1,1,0,0,1,1......
 > 十进制数0.1转2进制对应的二进制数是 0.000110011001...... 无限循环小数
 > 0.1+0.2 !== 0.3
 > ```
@@ -164,7 +165,7 @@ flowchart LR
 
 - js 引擎会在代码执行之前，会在堆内存中创建一个全局对象：Global Object (GO)
 
-  - 该对象 所有的作用域（scope）都可以访问；
+  - 该对象所有的作用域（scope）都可以访问；
   - 里面会包含Date、Array、String、Number、setTimeout、setInterval 等等；
   - 其中还有一个window属性指向自己；
 
@@ -184,19 +185,19 @@ variable object VO 变量对象
 
 Global Object
 
-Action Object
+Activation Object
 
 - js引擎内部有一个执行上下文栈（Execution Context Stack，简称ECS），它是用于执行代码的调用栈。 
 
 - 那么现在它要执行谁呢？执行的是全局的代码块： 
   - 全局的代码块为了执行会构建一个 Global Execution Context（GEC）； 
   
-  - GEC会 被放入到ECS中 执行； 
+  - GEC会被放入到ECS中 执行； 
   
     ![image-20220326182711451](JavaScript.assets/image-20220326182711451.png)
   
 - GEC被放入到ECS中里面包含两部分内容： 
-  - 第一部分：在代码执行前，在parser转成AST的过程中，会将全局定义的变量、函数等加入到 GlobalObject 中， 变量并不会赋值，函数会在堆中开辟一块内存保存 函数体以及 parentscope：父级GO（AO）地址，返回函数内存地址给值变量；如果变量与函数重名，将共享函数内存地址
+  - 第一部分：在代码执行前，在parser转成AST的过程中，会将全局定义的变量、函数等加入到 GlobalObject 中， 变量并不会赋值，函数会在堆中开辟一块内存保存函数体以及 parentScope：父级GO（AO）地址，返回函数内存地址给值变量；如果变量与函数重名，将共享函数内存地址
     - 这个过程也称之为变量的作用域提升（hoisting） 
   - 第二部分：在代码执行中，对变量赋值，或者执行其他的函数；如果变量名与函数重名，若变量被赋值，变量地址被修改，此时函数声明无效，无法访问函数，被变量覆盖，访问得到被覆盖的值
   
@@ -235,7 +236,7 @@ Action Object
 
 2. 对不同类型的变量分配方式不一样
 
-   1. 基本数据类型会在执行时直接在站空间进行分配
+   1. 基本数据类型会在执行时直接在栈空间进行分配
 
    2. 复杂数据类型内存分配会在堆内存中开辟一块空间，并且将这块空间的指针返回值变量引用
 
@@ -268,7 +269,7 @@ JS 引擎比较广泛采用的就是标记清除算法
 
 ### 闭包（Closure）
 
-是在支持 头等函数 的编程语言中，实现词法绑定的一种技术； 
+是在支持头等函数 的编程语言中，实现词法绑定的一种技术； 
 
 闭包在实现上是一个结构体，它存储了一个函数和一个关联的环境（相当于一个符号查找表）；
 
@@ -883,7 +884,7 @@ React 中所有组件都是按照纯函数进行编程
 - 在计算机科学中，柯里化（英语：Currying），又译为卡瑞化或加里化； 
   - 是把接收多个参数的函数，变成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参 数，而且返回结果的新函数的技术； 
   - 柯里化声称 “如果你固定某些参数，你将得到接受余下参数的一个函数”； 
-- 维基百科的结束非常的抽象，我们这里做一个总结： p
+- 维基百科的结束非常的抽象，我们这里做一个总结：
   - 只传递给函数一部分参数来调用它，让它返回一个函数去处理剩余的参数； 
   - 这个过程就称之为柯里化
 
@@ -948,28 +949,28 @@ function curry(fn) {
   - 这个过程就是对函数的组合，我们称之为 组合函数（Compose Function）；
 
 ```js
-function componse(...fns) {
-  const length = fns.length
-  for (let i = 0; i < length; i++) {
-    if (typeof fns[i] !== 'function') {
-      throw TypeError('Expected arguments are function')
-    }
-  }
-  return function (...args) {
-    let index = 0
-    let result = length ? fns[index].apply(this, args) : args
-    while(true) {
-      index++
-      if(index>=length) {
-        break
-      }
-      result = fns[index].call(this, result)
-    }
-    return result
-  }
-}
+// function compose(...fns) {
+//   const length = fns.length
+//   for (let i = 0; i < length; i++) {
+//     if (typeof fns[i] !== 'function') {
+//       throw TypeError('Expected arguments are function')
+//     }
+//   }
+//   return function (...args) {
+//     let index = 0
+//     let result = length ? fns[index].apply(this, args) : args
+//     while(true) {
+//       index++
+//       if(index>=length) {
+//         break
+//       }
+//       result = fns[index].call(this, result)
+//     }
+//     return result
+//   }
+// }
 
-console.log(componse(add, square, double)(1))
+// console.log(compose(add, square, double)(1))
 
 function double(m) {
   return m * 2
@@ -982,6 +983,15 @@ function square(n) {
 function add(num) {
   return num + 2
 }
+
+// 从左往右执行
+const compose = (...fns) => value => fns.reduce((pre, cur) => cur(pre), value)
+// 从右往左执行
+const pipe = (...fns) => value => fns.reduceRight((pre, cur) => cur(pre), value)
+
+console.log(compose(add, square, double)(1))
+console.log(pipe(add, square, double)(1))
+
 ```
 
 
@@ -1035,10 +1045,10 @@ eval(jsString)
   - 也支持对某一个函数开启严格模式；
 
     ```js
-    // "use strict"
+    "use strict"
     
     function foo() {
-    	// "use strict"
+    	"use strict"
     }
     ```
 
@@ -1138,9 +1148,9 @@ setTimeout(function() {
 > Object.defineProperty(obj, prop, descriptor)
 
 - 可接收三个参数： 
-  - obj要定义属性的对象； 
-  - prop要定义或修改的属性的名称或 Symbol； 
-  - descriptor要定义或修改的属性描述符； 
+  - obj 要定义属性的对象； 
+  - prop 要定义或修改的属性的名称或 Symbol； 
+  - descriptor 要定义或修改的属性描述符； 
 - 返回值： 
   - 被传递给函数的对象。
 
@@ -1448,7 +1458,7 @@ student1.studying()
 
 ##### 原型链继承的弊端
 
-但是目前有一个很大的弊端：某些属性其实是保存在p对象上的； 
+但是目前有一个很大的弊端：某些属性其实是保存在对象上的； 
 
 - 第一，我们通过直接打印对象是看不到这个属性的（原型上的name没有展示）； 
 - 第二，这个属性会被多个对象共享，如果这个对象（friends）是一个引用类型，那么就会造成问题； 
@@ -2196,7 +2206,7 @@ Student.staticMethod()
 
 ![image-20220329125014383](JavaScript.assets/image-20220329125014383.png)
 
-#### 
+
 
 #### JavaScript中的多态
 
@@ -2335,7 +2345,7 @@ ES6新增的两个关键字
 
 #### 变量被保存到VariableMap中
 
-- 也就是说我们声明的变量和环境记录是被添加到变量环境中的： 
+- 也就是说我们声明的变量和函数的声明会作为环境记录是被添加到变量环境中的： 
   - 但是标准有没有规定这个对象是window对象或者其他对象呢？ 
   - 其实并没有，那么JS引擎在解析的时候，其实会有自己的实现； 
   - 比如v8中其实是通过VariableMap的一个hashmap来实现它们的存储的。 
@@ -2449,7 +2459,7 @@ for (let i = 0; i < 5; i++) {
 - 默认值会改变函数的length的个数，默认值以及后面的参数都不计算在length之内
 
 ```js
-function foo(m='a', n='b') {
+function foo(m ='a', n ='b') {
     console.log(a, b)
 }
 
@@ -2756,7 +2766,7 @@ p.running.call({name: 'jz'}) // Error: 不能通过非构造方法对象调用ru
 - Map常见的方法： pset(key, value)：在Map中添加key、value，并且返回整个Map对象；
   - set(key, value):  在Map中添加key、value，并且返回整个Map对象；
   - get(key)：根据key获取Map中的value； 
-  - has(key)：判断是否包括某一个key，返回Boolean类型； p
+  - has(key)：判断是否包括某一个key，返回Boolean类型；
   - delete(key)：根据key删除一个键值对，返回Boolean类型； 
   - clear()：清空所有的元素； pforEach(callback, [, thisArg])：通过forEach遍历Map； 
   - Map也可以通过for of进行遍历。
@@ -2765,7 +2775,7 @@ p.running.call({name: 'jz'}) // Error: 不能通过非构造方法对象调用ru
 
 #### WeakMap的使用
 
-- 和Map类型的另外一个数据结构称之为WeakMap，也是以键值对的形式存在的。\
+- 和Map类型的另外一个数据结构称之为WeakMap，也是以键值对的形式存在的。
 
 - 那么和Map有什么区别呢？ 
 
@@ -2888,7 +2898,7 @@ console.log(newMessage) // ****Hello World-----
 
 #### ES10 - flat flatMap
 
-- flat() 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返 回。 
+- flat() 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。 
 - flatMap() 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。 
   - 注意一：flatMap是先进行map操作，再做flat的操作； 
   - 注意二：flatMap中的flat相当于深度为1；
@@ -3167,7 +3177,7 @@ console.log(msg)
   - 也就是说，如果我们希望监听一个对象的相关操作，那么我们可以先创建一个代理对象（Proxy对象）； 
   - 之后对该对象的所有操作，都通过代理对象来完成，代理对象可以监听我们想要对原对象进行哪些操作； 
 - 我们可以将上面的案例用Proxy来实现一次： 
-  - p首先，我们需要new Proxy对象，并且传入需要侦听的对象以及一个处理对象，可以称之为handler； 
+  - 首先，我们需要new Proxy对象，并且传入需要侦听的对象以及一个处理对象，可以称之为handler； 
     - const p = new Proxy(target, handler) 
   - 其次，我们之后的操作都是直接对Proxy的操作，而不是原有的对象，因为我们需要在handler里面进行侦听；
 
@@ -3574,7 +3584,7 @@ objProxy.name = 'll'
 
 - 情况二：如果resolve中传入的是另外一个Promise，那么这个新Promise会决定原Promise的状态： 
 
-- 情况三：如果resolve中传入的是一个对象，并且这个对象有实现then方法，那么会执行该then方法，并且根据 then方法的结果来决定Promise的状态：
+- 情况三：如果resolve中传入的是一个thenable对象，并且这个对象有实现then方法，那么会执行该then方法，并且根据 then方法的结果来决定Promise的状态：
 
   ```js
   // resolve 传入普通值或对象，这个值会作为then回调的参数
@@ -3596,7 +3606,7 @@ objProxy.name = 'll'
       then: (resolve1, reject1) => {
         // resolve1('aaa--')
         reject1('bbb--')
-    }
+    	}
     })
   }).then(res => console.log('success: ', res), err => console.log('error: ', err))
   ```
@@ -3605,7 +3615,7 @@ objProxy.name = 'll'
 
 #### then方法 - 接受两个参数
 
-- then方法是**Promise对象**(new Promise())上的一个方法：它其实是放在Promise的原型上的 Promise.prototype.then 
+- then方法是**Promise实例对象**(new Promise())上的一个方法：它其实是放在Promise的原型上的 Promise.prototype.then 
 - then方法接受两个参数： 
   - fulfilled的回调函数：当状态变成fulfilled时会回调的函数； 
   - reject的回调函数：当状态变成reject时会回调的函数；
@@ -3633,7 +3643,7 @@ objProxy.name = 'll'
 
 #### catch方法 – 多次调用
 
-- catch方法也是Promise对象上的一个方法：它也是放在Promise的原型上的 Promise.prototype.catch 
+- catch方法也是Promise实例对象上的一个方法：它也是放在Promise的原型上的 Promise.prototype.catch 
 - 一个Promise的catch方法是可以被多次调用的： 
   - 每次调用我们都可以传入对应的reject回调； 
   - 当Promise的状态变成reject的时候，这些回调函数都会被执行；
@@ -3670,7 +3680,7 @@ objProxy.name = 'll'
 
 #### finally方法
 
-- finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是reject状态，最终都会 被执行的代码。 
+- finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是reject状态，最终都会被执行的代码。 
 - finally方法是不接收参数的，因为无论前面是fulfilled状态，还是reject状态，它都会执行。
 
 ```js
@@ -3853,16 +3863,16 @@ Promise.any([p1, p2, p3, p4])
 
 1. 定义Promise 的状态
 2. 实现executor()立即执行，内部接收resolve，reject
-   1. resolve 改变Promise状态，添加微任务，处理onFulfilled
-   2. reject 改变Promise状态，添加微任务，处理onRejected
+   1. resolve 添加微任务，改变Promise状态，处理onFulfilled
+   2. reject 添加微任务，改变Promise状态，处理onRejected
 3. 实现then方法
    1. 接收成功和失败回调函数
-   2. 判断当前promise状态，
-      1. 如果已经fulfilled或rejected立即执行对应回调
+   2. 判断当前 promise 状态，
+      1. 如果已经 fulfilled 或 rejected 立即执行对应回调
       2. 如果pending，保存回调函数，状态改变时执行
-   3. then执行完返回promise对象
+   3. then执行完返回 promise 对象
 4. 实现catch方法，调用then方法，接收onRejected回调
-5. 实现finally 方法，调用then方法
+5. 实现 finally 方法，调用then方法
 6. 实现类方法all
    1. 所有promise都fulfilled返回所有值
    2. 只要有一个rejected，返回rejected
@@ -4621,7 +4631,7 @@ function requestData(url) {
 // })
 
 // function execGen(gen) {
-//   	const  generator = gen()
+//   const generator = gen()
 //   function exec(res) {
 //     const result = generator.next(res)
 //     if (result.done) return result.value
@@ -5263,6 +5273,8 @@ bar()
 
 #### export 关键字
 
+> export 导出的是变量的引用，导入、导出指向同一个内存地址
+
 - export关键字将一个模块中的变量、函数、类等导出；
 
 - 我们希望将其他中内容全部导出，它可以有如下的方式： 
@@ -5366,6 +5378,8 @@ export * from './math.js'
 
 #### defult 用法
 
+> 之前导出的功能都是有名字的导出（named export）
+>
 > 注意：在一个模块中，只能有一个默认导出（default export）
 
 - 默认导出export时可以不需要指定名字； 
@@ -5377,6 +5391,7 @@ const foo = 'foo'
 
 // 第一种方式
 export default foo
+export default function() {}
 
 // 第二种方式
 export {
@@ -5417,13 +5432,18 @@ import.meta是一个给JavaScript模块暴露特定上下文的元数据属性�
 
 #### ES Module的解析流程
 
+- ES Module 加载js文件的过程是编译（解析）时加载的，并且是异步的
+- 异步的意味着：JS引擎在遇到import时会去获取这个js文件，但是这个获取的过程是异步的，并不会阻塞主线程继 续执行；
+  - 也就是说设置了 type=module 的代码，相当于在script标签上也加上了 async 属性；
+  - 不会阻塞后面的script代码的执行
+
 - ES Module是如何被浏览器解析并且让模块之间可以相互引用的呢？ 
   - https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
-- ES Module的解析过程可以划分为三个阶段： p
+- ES Module的解析过程可以划分为三个阶段：
   - 阶段一：构建（Construction），根据地址查找js文件，并且下载，将其解析成模块记录（Module Record）； 
   - 阶段二：实例化（Instantiation），对模块记录进行实例化，并且分配内存空间，把所有导出的值放入内存（并不会填充值），然后把导入和导出都指向对应的内存地址。 
   - 阶段三：运行（Evaluation），运行代码，计算值，并且将值填充到内存地址中；
-- ES 模块使用一种叫做**活绑定**的东西。两个模块都指向内存中的相同位置。这意味着当导出模块更改一个值时，该更改将显示在导入模块中。导出值的模块可以随时更改这些值，但导入模块不能更改其导入值。也就是说，如果一个模块导入一个对象，它可以改变该对象上的属性值。
+- ES 模块使用一种叫做**活绑定**的东西。两个模块都指向内存中的相同位置。这意味着当导出模块更改一个值时，该更改将显示在导入模块中。导出值的模块可以随时更改这些值，但导入模块不能更改其导入值。也就是说，如果一个模块导出一个对象，它可以改变该对象上的属性值。
 
 ![image-20220403221950303](JavaScript.assets/image-20220403221950303.png)
 
