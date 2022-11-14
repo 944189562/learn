@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      const formatUrl = (url, size) => {
+        return `${url}?param=${size}y${size}`
+      }
+
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            message: 'Hello React',
+            imgUrl: 'http://p1.music.126.net/R-Eg1aZcut8jKYM6UP5fvA==/109951167311919702.jpg',
+            link: 'https://www.baidu.com',
+            active: true,
+          }
+        }
+
+        render() {
+          return (
+            <div>
+              {/* 普通属性绑定 */}
+              <h2 title={this.state.message}>{this.state.message}</h2>
+              <img src={formatUrl(this.state.imgUrl, 140)} alt=""/><br/>
+              <a href={this.state.link} target="_blank">百度一下</a>
+              {/* class绑定 用className */}
+              <div className="box title">div</div>
+              <div className={'box title ' + (this.state.active ? 'color' : '')}>class绑定</div>
+              <label htmlFor="name">label</label>
+              {/* style绑定 */}
+              <div style={{fontSize: '18px', lineHeight: '2em', color: 'white', backgroundColor: 'red'}}>style绑定</div>
+            </div>
+          )
+        }
+      }
+
+      // ReactDOM.render(<App/>, document.getElementById('app'))
+      const root = ReactDOM.createRoot(document.getElementById('app'))
+      root.render(<App/>)
+    </script>
+  </body>
+</html>

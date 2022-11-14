@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super()
+          this.state = {
+            message: 'Hello World',
+            movies: ['星球大战', '笨小孩', '复仇者联盟', '后来的我们'],
+            // 1. 在{} 中可以正常显示的数据类型
+            name: 'jz',
+            age: 18,
+            friends: ['刘德华', 'kobe brant'],
+            // 2. 在{}中不能正常显示（忽略）
+            test1: null, // null
+            test2: undefined, // undefined
+            test3: true, // boolean
+            // 3. 对象不能作为jsx的子类，报错
+            friend: {
+              name: 'kobe',
+              age: 40
+            }
+          }
+        }
+
+        render() {
+          return (
+            <div>
+              <h2>{this.state.message}</h2>
+              {/* 1. 事件绑定，this 指向需要显示绑定 */}
+              <button onClick={this.handler.bind(this)}>事件绑定</button>
+              <ul>
+                {
+                  this.state.movies.map(movie => <li>{movie}</li>)
+                }
+              </ul>
+              <h2>正常显示</h2>
+              <div>
+                <p>{this.state.name}</p>
+                <p>{this.state.age}</p>
+                <p>{this.state.friends}</p>
+              </div>
+              <h2>忽略显示</h2>
+              <div>
+                <p>{this.state.test1}</p>
+                <p>{this.state.test2}</p>
+                <p>{this.state.test3}</p>
+              </div>
+              <h2>对象</h2>
+              {/* <div>{this.state.friend}</div> */}
+            </div>
+          )
+        }
+
+        handler() {
+          this.setState({
+            message: 'Hello React'
+          })
+        }
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>

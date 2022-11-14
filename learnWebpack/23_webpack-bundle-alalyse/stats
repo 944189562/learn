@@ -1,0 +1,3822 @@
+{
+  "hash": "1a07514e5630d7cdf8b8",
+  "version": "5.23.0",
+  "time": 1381,
+  "builtAt": 1655622873263,
+  "publicPath": "",
+  "outputPath": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\build",
+  "assetsByChunkName": {
+    "main": [
+      "js/main.01ef5d.bundle.js"
+    ],
+    "index": [
+      "js/index.b82803.bundle.js"
+    ],
+    "runtime": [
+      "js/runtime.4b1f57.bundle.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "js/main.01ef5d.bundle.js",
+      "size": 3693,
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "immutable": true,
+        "chunkhash": "01ef5d",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "gzipped": "js/main.01ef5d.bundle.js.gz"
+        },
+        "size": 3693
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 0,
+      "related": [
+        {
+          "type": "gzipped",
+          "name": "js/main.01ef5d.bundle.js.gz",
+          "size": 1793,
+          "emitted": true,
+          "comparedForEmit": false,
+          "cached": false,
+          "info": {
+            "compressed": true,
+            "immutable": true,
+            "size": 1793
+          },
+          "chunkNames": [],
+          "chunkIdHints": [],
+          "auxiliaryChunkNames": [],
+          "auxiliaryChunkIdHints": [],
+          "related": {},
+          "chunks": [],
+          "auxiliaryChunks": [],
+          "isOverSizeLimit": false
+        }
+      ],
+      "chunks": [
+        179
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    },
+    {
+      "type": "asset",
+      "name": "js/runtime.4b1f57.bundle.js",
+      "size": 1012,
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "immutable": true,
+        "chunkhash": "4b1f57",
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "gzipped": "js/runtime.4b1f57.bundle.js.gz"
+        },
+        "size": 1012
+      },
+      "chunkNames": [
+        "runtime"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "filteredRelated": 0,
+      "related": [
+        {
+          "type": "gzipped",
+          "name": "js/runtime.4b1f57.bundle.js.gz",
+          "size": 584,
+          "emitted": true,
+          "comparedForEmit": false,
+          "cached": false,
+          "info": {
+            "compressed": true,
+            "immutable": true,
+            "size": 584
+          },
+          "chunkNames": [],
+          "chunkIdHints": [],
+          "auxiliaryChunkNames": [],
+          "auxiliaryChunkIdHints": [],
+          "related": {},
+          "chunks": [],
+          "auxiliaryChunks": [],
+          "isOverSizeLimit": false
+        }
+      ],
+      "chunks": [
+        666
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    },
+    {
+      "type": "asset",
+      "name": "index.html",
+      "size": 650,
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "size": 650
+      },
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "related": {},
+      "chunks": [],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    },
+    {
+      "type": "asset",
+      "name": "js/index.b82803.bundle.js",
+      "size": 134,
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "immutable": true,
+        "chunkhash": "b82803",
+        "javascriptModule": false,
+        "minimized": true,
+        "size": 134
+      },
+      "chunkNames": [
+        "index"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "related": {},
+      "chunks": [
+        826
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    }
+  ],
+  "chunks": [
+    {
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "recorded": false,
+      "size": 9635,
+      "sizes": {
+        "javascript": 9635
+      },
+      "names": [
+        "main"
+      ],
+      "idHints": [],
+      "runtime": [
+        "runtime"
+      ],
+      "files": [
+        "js/main.01ef5d.bundle.js"
+      ],
+      "auxiliaryFiles": [],
+      "hash": "01ef5d5e15c94dc97e5e",
+      "childrenByOrder": {},
+      "id": 179,
+      "siblings": [
+        666
+      ],
+      "parents": [],
+      "children": [],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 392,
+          "sizes": {
+            "javascript": 392
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "index": 3,
+          "preOrderIndex": 3,
+          "index2": 2,
+          "postOrderIndex": 2,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": true,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "issuerName": "./src/style.css",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "name": "./src/style.css",
+              "profile": {
+                "total": 14,
+                "resolving": 5,
+                "restoring": 0,
+                "building": 9,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 5,
+                "dependencies": 0
+              },
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 76,
+            "resolving": 1,
+            "restoring": 0,
+            "building": 75,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 1,
+            "dependencies": 0
+          },
+          "id": 426,
+          "issuerId": null,
+          "chunks": [
+            179
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+              "module": "./src/main.js + 3 modules",
+              "moduleName": "./src/main.js + 3 modules",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "2:12-87",
+              "moduleId": 314,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+              "module": "./src/main.js + 3 modules",
+              "moduleName": "./src/main.js + 3 modules",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "9:17-24",
+              "moduleId": 314,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+              "module": "./src/main.js + 3 modules",
+              "moduleName": "./src/main.js + 3 modules",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "13:15-29",
+              "moduleId": 314,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "2:12-87",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "9:17-24",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+              "loc": "13:15-29",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+            "Statement (VariableDeclaration) with side effects in source code at 3:0-84",
+            "ModuleConcatenation bailout: Module uses module.id"
+          ],
+          "depth": 2
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 1605,
+          "sizes": {
+            "javascript": 1605
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "name": "./node_modules/css-loader/dist/runtime/api.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "index": 4,
+          "preOrderIndex": 4,
+          "index2": 1,
+          "postOrderIndex": 1,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": true,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "name": "./src/style.css",
+              "profile": {
+                "total": 14,
+                "resolving": 5,
+                "restoring": 0,
+                "building": 9,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 5,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "name": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "profile": {
+                "total": 76,
+                "resolving": 1,
+                "restoring": 0,
+                "building": 75,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 1,
+                "dependencies": 0
+              },
+              "id": 426
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 0,
+            "resolving": 0,
+            "restoring": 0,
+            "building": 0,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 0,
+            "dependencies": 0
+          },
+          "id": 705,
+          "issuerId": 426,
+          "chunks": [
+            179
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+              "module": "./node_modules/css-loader/dist/runtime/api.js",
+              "moduleName": "./node_modules/css-loader/dist/runtime/api.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+              "resolvedModule": "./node_modules/css-loader/dist/runtime/api.js",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "9:0-14",
+              "moduleId": 705,
+              "resolvedModuleId": 705
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "2:0-89",
+              "moduleId": 426,
+              "resolvedModuleId": 426
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+              "loc": "3:30-57",
+              "moduleId": 426,
+              "resolvedModuleId": 426
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: module.exports is used directly at 9:0-14",
+            "Statement (ExpressionStatement) with side effects in source code at 9:0-66:2",
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 3
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 6827,
+          "sizes": {
+            "javascript": 6827
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+          "name": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+          "index": 2,
+          "preOrderIndex": 2,
+          "index2": 0,
+          "postOrderIndex": 0,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": true,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "issuerName": "./src/style.css",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "name": "./src/style.css",
+              "profile": {
+                "total": 14,
+                "resolving": 5,
+                "restoring": 0,
+                "building": 9,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 5,
+                "dependencies": 0
+              },
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 0,
+            "resolving": 0,
+            "restoring": 0,
+            "building": 0,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 0,
+            "dependencies": 0
+          },
+          "id": 379,
+          "issuerId": null,
+          "chunks": [
+            179
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+              "module": "./src/main.js + 3 modules",
+              "moduleName": "./src/main.js + 3 modules",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "1:0-89",
+              "moduleId": 314,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+              "module": "./src/main.js + 3 modules",
+              "moduleName": "./src/main.js + 3 modules",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "9:13-16",
+              "moduleId": 314,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "1:0-89",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "module": "./src/style.css",
+              "moduleName": "./src/style.css",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "resolvedModule": "./src/style.css",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "loc": "9:13-16",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+              "module": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "moduleName": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+              "resolvedModule": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "230:0-14",
+              "moduleId": 379,
+              "resolvedModuleId": 379
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: module.exports is used directly at 230:0-14",
+            "Statement (VariableDeclaration) with side effects in source code at 3:0-17:4",
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/esm",
+          "layer": null,
+          "size": 811,
+          "sizes": {
+            "javascript": 811
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "name": "./src/main.js + 3 modules",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 6,
+          "postOrderIndex": 6,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": 314,
+          "chunks": [
+            179
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./src/main.js",
+              "loc": "main",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [],
+          "providedExports": [],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Cannot concat with ./node_modules/css-loader/dist/cjs.js!./src/style.css: Module uses module.id",
+            "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "modules": [
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "layer": null,
+              "size": 378,
+              "sizes": {
+                "javascript": 378
+              },
+              "built": true,
+              "codeGenerated": false,
+              "cached": false,
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "index": 0,
+              "preOrderIndex": 0,
+              "index2": 6,
+              "postOrderIndex": 6,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": true,
+              "issuer": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null,
+              "issuerId": null,
+              "chunks": [],
+              "assets": [],
+              "reasons": [],
+              "usedExports": [],
+              "providedExports": [],
+              "optimizationBailout": [
+                "Statement (ExpressionStatement) with side effects in source code at 12:0-10"
+              ],
+              "depth": 0
+            },
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "layer": null,
+              "size": 326,
+              "sizes": {
+                "javascript": 326
+              },
+              "built": true,
+              "codeGenerated": false,
+              "cached": false,
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "name": "./src/style.css",
+              "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+              "index": 1,
+              "preOrderIndex": 1,
+              "index2": 3,
+              "postOrderIndex": 3,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": true,
+              "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "issuerName": "./src/main.js",
+              "issuerPath": [
+                {
+                  "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "name": "./src/main.js",
+                  "profile": {
+                    "total": 752,
+                    "resolving": 145,
+                    "restoring": 0,
+                    "building": 607,
+                    "integration": 0,
+                    "storing": 0,
+                    "additionalResolving": 0,
+                    "additionalIntegration": 0,
+                    "factory": 145,
+                    "dependencies": 0
+                  },
+                  "id": null
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 14,
+                "resolving": 5,
+                "restoring": 0,
+                "building": 9,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 5,
+                "dependencies": 0
+              },
+              "id": null,
+              "issuerId": null,
+              "chunks": [],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "module": "./src/main.js",
+                  "moduleName": "./src/main.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "resolvedModule": "./src/main.js",
+                  "type": "harmony side effect evaluation",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": "./style.css",
+                  "loc": "1:0-21",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": [],
+              "providedExports": [
+                "default"
+              ],
+              "optimizationBailout": [
+                "Statement (VariableDeclaration) with side effects in source code at 4:0-17"
+              ],
+              "depth": 1
+            },
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "layer": null,
+              "size": 56,
+              "sizes": {
+                "javascript": 56
+              },
+              "built": true,
+              "codeGenerated": false,
+              "cached": false,
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+              "name": "./node_modules/coderjz_utils/lib/math.js",
+              "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+              "index": 5,
+              "preOrderIndex": 5,
+              "index2": 4,
+              "postOrderIndex": 4,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": true,
+              "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "issuerName": "./node_modules/coderjz_utils/index.js",
+              "issuerPath": [
+                {
+                  "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "name": "./src/main.js",
+                  "profile": {
+                    "total": 752,
+                    "resolving": 145,
+                    "restoring": 0,
+                    "building": 607,
+                    "integration": 0,
+                    "storing": 0,
+                    "additionalResolving": 0,
+                    "additionalIntegration": 0,
+                    "factory": 145,
+                    "dependencies": 0
+                  },
+                  "id": null
+                },
+                {
+                  "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "name": "./node_modules/coderjz_utils/index.js",
+                  "profile": {
+                    "total": 137,
+                    "resolving": 72,
+                    "restoring": 0,
+                    "building": 65,
+                    "integration": 0,
+                    "storing": 0,
+                    "additionalResolving": 0,
+                    "additionalIntegration": 0,
+                    "factory": 72,
+                    "dependencies": 0
+                  },
+                  "id": null
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 56,
+                "resolving": 44,
+                "restoring": 0,
+                "building": 12,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 44,
+                "dependencies": 0
+              },
+              "id": null,
+              "issuerId": null,
+              "chunks": [],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "module": "./node_modules/coderjz_utils/index.js",
+                  "moduleName": "./node_modules/coderjz_utils/index.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "resolvedModule": "./node_modules/coderjz_utils/index.js",
+                  "type": "harmony side effect evaluation",
+                  "active": false,
+                  "explanation": "",
+                  "userRequest": "./lib/math",
+                  "loc": "1:0-35",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "module": "./node_modules/coderjz_utils/index.js",
+                  "moduleName": "./node_modules/coderjz_utils/index.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "resolvedModule": "./node_modules/coderjz_utils/index.js",
+                  "type": "harmony export imported specifier",
+                  "active": false,
+                  "explanation": "",
+                  "userRequest": "./lib/math",
+                  "loc": "3:0-24",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "module": "./src/main.js",
+                  "moduleName": "./src/main.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "resolvedModule": "./src/main.js",
+                  "type": "harmony import specifier",
+                  "active": true,
+                  "explanation": "(skipped side-effect-free modules)",
+                  "userRequest": "coderjz_utils",
+                  "loc": "17:12-20",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": [
+                "sum"
+              ],
+              "providedExports": [
+                "sum"
+              ],
+              "optimizationBailout": [],
+              "depth": 1
+            },
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "layer": null,
+              "size": 51,
+              "sizes": {
+                "javascript": 51
+              },
+              "built": true,
+              "codeGenerated": false,
+              "cached": false,
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+              "name": "./node_modules/coderjz_utils/lib/format.js",
+              "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+              "index": 6,
+              "preOrderIndex": 6,
+              "index2": 5,
+              "postOrderIndex": 5,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": true,
+              "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "issuerName": "./node_modules/coderjz_utils/index.js",
+              "issuerPath": [
+                {
+                  "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "name": "./src/main.js",
+                  "profile": {
+                    "total": 752,
+                    "resolving": 145,
+                    "restoring": 0,
+                    "building": 607,
+                    "integration": 0,
+                    "storing": 0,
+                    "additionalResolving": 0,
+                    "additionalIntegration": 0,
+                    "factory": 145,
+                    "dependencies": 0
+                  },
+                  "id": null
+                },
+                {
+                  "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "name": "./node_modules/coderjz_utils/index.js",
+                  "profile": {
+                    "total": 137,
+                    "resolving": 72,
+                    "restoring": 0,
+                    "building": 65,
+                    "integration": 0,
+                    "storing": 0,
+                    "additionalResolving": 0,
+                    "additionalIntegration": 0,
+                    "factory": 72,
+                    "dependencies": 0
+                  },
+                  "id": null
+                }
+              ],
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 48,
+                "resolving": 44,
+                "restoring": 0,
+                "building": 4,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 44,
+                "dependencies": 0
+              },
+              "id": null,
+              "issuerId": null,
+              "chunks": [],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "module": "./node_modules/coderjz_utils/index.js",
+                  "moduleName": "./node_modules/coderjz_utils/index.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "resolvedModule": "./node_modules/coderjz_utils/index.js",
+                  "type": "harmony side effect evaluation",
+                  "active": false,
+                  "explanation": "",
+                  "userRequest": "./lib/format",
+                  "loc": "2:0-39",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "module": "./node_modules/coderjz_utils/index.js",
+                  "moduleName": "./node_modules/coderjz_utils/index.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+                  "resolvedModule": "./node_modules/coderjz_utils/index.js",
+                  "type": "harmony export imported specifier",
+                  "active": false,
+                  "explanation": "",
+                  "userRequest": "./lib/format",
+                  "loc": "3:0-24",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "module": "./src/main.js",
+                  "moduleName": "./src/main.js",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+                  "resolvedModule": "./src/main.js",
+                  "type": "harmony import specifier",
+                  "active": true,
+                  "explanation": "(skipped side-effect-free modules)",
+                  "userRequest": "coderjz_utils",
+                  "loc": "18:12-25",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": [
+                "format"
+              ],
+              "providedExports": [
+                "format"
+              ],
+              "optimizationBailout": [],
+              "depth": 1
+            }
+          ]
+        }
+      ],
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src/main.js"
+        }
+      ]
+    },
+    {
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "recorded": false,
+      "size": 3236,
+      "sizes": {
+        "runtime": 3236
+      },
+      "names": [
+        "runtime"
+      ],
+      "idHints": [],
+      "runtime": [
+        "runtime"
+      ],
+      "files": [
+        "js/runtime.4b1f57.bundle.js"
+      ],
+      "auxiliaryFiles": [],
+      "hash": "4b1f574d1d1514088d3b",
+      "childrenByOrder": {},
+      "id": 666,
+      "siblings": [
+        179,
+        826
+      ],
+      "parents": [],
+      "children": [],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 267,
+          "sizes": {
+            "runtime": 267
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/compat get default export",
+          "name": "webpack/runtime/compat get default export",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            666
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 308,
+          "sizes": {
+            "runtime": 308
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/define property getters",
+          "name": "webpack/runtime/define property getters",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            666
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 88,
+          "sizes": {
+            "runtime": 88
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/hasOwnProperty shorthand",
+          "name": "webpack/runtime/hasOwnProperty shorthand",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            666
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 2573,
+          "sizes": {
+            "runtime": 2573
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/jsonp chunk loading",
+          "name": "webpack/runtime/jsonp chunk loading",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            666
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        }
+      ],
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "index",
+          "request": "./src/index.js"
+        },
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src/main.js"
+        }
+      ]
+    },
+    {
+      "rendered": true,
+      "initial": true,
+      "entry": false,
+      "recorded": false,
+      "size": 35,
+      "sizes": {
+        "javascript": 35
+      },
+      "names": [
+        "index"
+      ],
+      "idHints": [],
+      "runtime": [
+        "runtime"
+      ],
+      "files": [
+        "js/index.b82803.bundle.js"
+      ],
+      "auxiliaryFiles": [],
+      "hash": "b82803fde57df28a2161",
+      "childrenByOrder": {},
+      "id": 826,
+      "siblings": [
+        666
+      ],
+      "parents": [],
+      "children": [],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 35,
+          "sizes": {
+            "javascript": 35
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\index.js",
+          "name": "./src/index.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\index.js",
+          "index": 7,
+          "preOrderIndex": 7,
+          "index2": 7,
+          "postOrderIndex": 7,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 632,
+            "resolving": 138,
+            "restoring": 0,
+            "building": 494,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 138,
+            "dependencies": 0
+          },
+          "id": 579,
+          "issuerId": null,
+          "chunks": [
+            826
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./src/index.js",
+              "loc": "index",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [],
+          "providedExports": [
+            "message"
+          ],
+          "optimizationBailout": [],
+          "depth": 0
+        }
+      ],
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "index",
+          "request": "./src/index.js"
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "type": "module",
+      "moduleType": "javascript/esm",
+      "layer": null,
+      "size": 811,
+      "sizes": {
+        "javascript": 811
+      },
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+      "name": "./src/main.js + 3 modules",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+      "index": 0,
+      "preOrderIndex": 0,
+      "index2": 6,
+      "postOrderIndex": 6,
+      "cacheable": true,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": 314,
+      "chunks": [
+        179
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "resolvedModuleIdentifier": null,
+          "resolvedModule": null,
+          "type": "entry",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./src/main.js",
+          "loc": "main",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [],
+      "providedExports": [],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Cannot concat with ./node_modules/css-loader/dist/cjs.js!./src/style.css: Module uses module.id",
+        "ModuleConcatenation bailout: Cannot concat with ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js: Module is not an ECMAScript module"
+      ],
+      "depth": 0,
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 378,
+          "sizes": {
+            "javascript": 378
+          },
+          "built": true,
+          "codeGenerated": false,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 6,
+          "postOrderIndex": 6,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null,
+          "issuerId": null,
+          "chunks": [],
+          "assets": [],
+          "reasons": [],
+          "usedExports": [],
+          "providedExports": [],
+          "optimizationBailout": [
+            "Statement (ExpressionStatement) with side effects in source code at 12:0-10"
+          ],
+          "depth": 0
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 326,
+          "sizes": {
+            "javascript": 326
+          },
+          "built": true,
+          "codeGenerated": false,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./src/style.css",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "index": 1,
+          "preOrderIndex": 1,
+          "index2": 3,
+          "postOrderIndex": 3,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "issuerName": "./src/main.js",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 14,
+            "resolving": 5,
+            "restoring": 0,
+            "building": 9,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 5,
+            "dependencies": 0
+          },
+          "id": null,
+          "issuerId": null,
+          "chunks": [],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "module": "./src/main.js",
+              "moduleName": "./src/main.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "resolvedModule": "./src/main.js",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./style.css",
+              "loc": "1:0-21",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+            "Statement (VariableDeclaration) with side effects in source code at 4:0-17"
+          ],
+          "depth": 1
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 56,
+          "sizes": {
+            "javascript": 56
+          },
+          "built": true,
+          "codeGenerated": false,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+          "name": "./node_modules/coderjz_utils/lib/math.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+          "index": 5,
+          "preOrderIndex": 5,
+          "index2": 4,
+          "postOrderIndex": 4,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "issuerName": "./node_modules/coderjz_utils/index.js",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "name": "./node_modules/coderjz_utils/index.js",
+              "profile": {
+                "total": 137,
+                "resolving": 72,
+                "restoring": 0,
+                "building": 65,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 72,
+                "dependencies": 0
+              },
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 56,
+            "resolving": 44,
+            "restoring": 0,
+            "building": 12,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 44,
+            "dependencies": 0
+          },
+          "id": null,
+          "issuerId": null,
+          "chunks": [],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "module": "./node_modules/coderjz_utils/index.js",
+              "moduleName": "./node_modules/coderjz_utils/index.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "resolvedModule": "./node_modules/coderjz_utils/index.js",
+              "type": "harmony side effect evaluation",
+              "active": false,
+              "explanation": "",
+              "userRequest": "./lib/math",
+              "loc": "1:0-35",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "module": "./node_modules/coderjz_utils/index.js",
+              "moduleName": "./node_modules/coderjz_utils/index.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "resolvedModule": "./node_modules/coderjz_utils/index.js",
+              "type": "harmony export imported specifier",
+              "active": false,
+              "explanation": "",
+              "userRequest": "./lib/math",
+              "loc": "3:0-24",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "module": "./src/main.js",
+              "moduleName": "./src/main.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "resolvedModule": "./src/main.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "(skipped side-effect-free modules)",
+              "userRequest": "coderjz_utils",
+              "loc": "17:12-20",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [
+            "sum"
+          ],
+          "providedExports": [
+            "sum"
+          ],
+          "optimizationBailout": [],
+          "depth": 1
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 51,
+          "sizes": {
+            "javascript": 51
+          },
+          "built": true,
+          "codeGenerated": false,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+          "name": "./node_modules/coderjz_utils/lib/format.js",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+          "index": 6,
+          "preOrderIndex": 6,
+          "index2": 5,
+          "postOrderIndex": 5,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "issuerName": "./node_modules/coderjz_utils/index.js",
+          "issuerPath": [
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "name": "./src/main.js",
+              "profile": {
+                "total": 752,
+                "resolving": 145,
+                "restoring": 0,
+                "building": 607,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 145,
+                "dependencies": 0
+              },
+              "id": null
+            },
+            {
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "name": "./node_modules/coderjz_utils/index.js",
+              "profile": {
+                "total": 137,
+                "resolving": 72,
+                "restoring": 0,
+                "building": 65,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 72,
+                "dependencies": 0
+              },
+              "id": null
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 48,
+            "resolving": 44,
+            "restoring": 0,
+            "building": 4,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 44,
+            "dependencies": 0
+          },
+          "id": null,
+          "issuerId": null,
+          "chunks": [],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "module": "./node_modules/coderjz_utils/index.js",
+              "moduleName": "./node_modules/coderjz_utils/index.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "resolvedModule": "./node_modules/coderjz_utils/index.js",
+              "type": "harmony side effect evaluation",
+              "active": false,
+              "explanation": "",
+              "userRequest": "./lib/format",
+              "loc": "2:0-39",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "module": "./node_modules/coderjz_utils/index.js",
+              "moduleName": "./node_modules/coderjz_utils/index.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+              "resolvedModule": "./node_modules/coderjz_utils/index.js",
+              "type": "harmony export imported specifier",
+              "active": false,
+              "explanation": "",
+              "userRequest": "./lib/format",
+              "loc": "3:0-24",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "module": "./src/main.js",
+              "moduleName": "./src/main.js",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+              "resolvedModule": "./src/main.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "(skipped side-effect-free modules)",
+              "userRequest": "coderjz_utils",
+              "loc": "18:12-25",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [
+            "format"
+          ],
+          "providedExports": [
+            "format"
+          ],
+          "optimizationBailout": [],
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 35,
+      "sizes": {
+        "javascript": 35
+      },
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\index.js",
+      "name": "./src/index.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\index.js",
+      "index": 7,
+      "preOrderIndex": 7,
+      "index2": 7,
+      "postOrderIndex": 7,
+      "cacheable": true,
+      "optional": false,
+      "orphan": false,
+      "issuer": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 632,
+        "resolving": 138,
+        "restoring": 0,
+        "building": 494,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 138,
+        "dependencies": 0
+      },
+      "id": 579,
+      "issuerId": null,
+      "chunks": [
+        826
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "resolvedModuleIdentifier": null,
+          "resolvedModule": null,
+          "type": "entry",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./src/index.js",
+          "loc": "index",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [],
+      "providedExports": [
+        "message"
+      ],
+      "optimizationBailout": [],
+      "depth": 0
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 326,
+      "sizes": {
+        "javascript": 326
+      },
+      "built": true,
+      "codeGenerated": false,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "name": "./src/style.css",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "index": 1,
+      "preOrderIndex": 1,
+      "index2": 3,
+      "postOrderIndex": 3,
+      "cacheable": true,
+      "optional": false,
+      "orphan": true,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+      "issuerName": "./src/main.js",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 14,
+        "resolving": 5,
+        "restoring": 0,
+        "building": 9,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 5,
+        "dependencies": 0
+      },
+      "id": null,
+      "issuerId": null,
+      "chunks": [],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "module": "./src/main.js",
+          "moduleName": "./src/main.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./style.css",
+          "loc": "1:0-21",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+        "Statement (VariableDeclaration) with side effects in source code at 4:0-17"
+      ],
+      "depth": 1
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 56,
+      "sizes": {
+        "javascript": 56
+      },
+      "built": true,
+      "codeGenerated": false,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+      "name": "./node_modules/coderjz_utils/lib/math.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\math.js",
+      "index": 5,
+      "preOrderIndex": 5,
+      "index2": 4,
+      "postOrderIndex": 4,
+      "cacheable": true,
+      "optional": false,
+      "orphan": true,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+      "issuerName": "./node_modules/coderjz_utils/index.js",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "name": "./node_modules/coderjz_utils/index.js",
+          "profile": {
+            "total": 137,
+            "resolving": 72,
+            "restoring": 0,
+            "building": 65,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 72,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 56,
+        "resolving": 44,
+        "restoring": 0,
+        "building": 12,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 44,
+        "dependencies": 0
+      },
+      "id": null,
+      "issuerId": null,
+      "chunks": [],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "module": "./node_modules/coderjz_utils/index.js",
+          "moduleName": "./node_modules/coderjz_utils/index.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "resolvedModule": "./node_modules/coderjz_utils/index.js",
+          "type": "harmony side effect evaluation",
+          "active": false,
+          "explanation": "",
+          "userRequest": "./lib/math",
+          "loc": "1:0-35",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "module": "./node_modules/coderjz_utils/index.js",
+          "moduleName": "./node_modules/coderjz_utils/index.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "resolvedModule": "./node_modules/coderjz_utils/index.js",
+          "type": "harmony export imported specifier",
+          "active": false,
+          "explanation": "",
+          "userRequest": "./lib/math",
+          "loc": "3:0-24",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "module": "./src/main.js",
+          "moduleName": "./src/main.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "(skipped side-effect-free modules)",
+          "userRequest": "coderjz_utils",
+          "loc": "17:12-20",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [
+        "sum"
+      ],
+      "providedExports": [
+        "sum"
+      ],
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 51,
+      "sizes": {
+        "javascript": 51
+      },
+      "built": true,
+      "codeGenerated": false,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+      "name": "./node_modules/coderjz_utils/lib/format.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\lib\\format.js",
+      "index": 6,
+      "preOrderIndex": 6,
+      "index2": 5,
+      "postOrderIndex": 5,
+      "cacheable": true,
+      "optional": false,
+      "orphan": true,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+      "issuerName": "./node_modules/coderjz_utils/index.js",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "name": "./node_modules/coderjz_utils/index.js",
+          "profile": {
+            "total": 137,
+            "resolving": 72,
+            "restoring": 0,
+            "building": 65,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 72,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 48,
+        "resolving": 44,
+        "restoring": 0,
+        "building": 4,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 44,
+        "dependencies": 0
+      },
+      "id": null,
+      "issuerId": null,
+      "chunks": [],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "module": "./node_modules/coderjz_utils/index.js",
+          "moduleName": "./node_modules/coderjz_utils/index.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "resolvedModule": "./node_modules/coderjz_utils/index.js",
+          "type": "harmony side effect evaluation",
+          "active": false,
+          "explanation": "",
+          "userRequest": "./lib/format",
+          "loc": "2:0-39",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "module": "./node_modules/coderjz_utils/index.js",
+          "moduleName": "./node_modules/coderjz_utils/index.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+          "resolvedModule": "./node_modules/coderjz_utils/index.js",
+          "type": "harmony export imported specifier",
+          "active": false,
+          "explanation": "",
+          "userRequest": "./lib/format",
+          "loc": "3:0-24",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "module": "./src/main.js",
+          "moduleName": "./src/main.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "(skipped side-effect-free modules)",
+          "userRequest": "coderjz_utils",
+          "loc": "18:12-25",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [
+        "format"
+      ],
+      "providedExports": [
+        "format"
+      ],
+      "optimizationBailout": [],
+      "depth": 1
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 100,
+      "sizes": {
+        "javascript": 100
+      },
+      "built": true,
+      "codeGenerated": false,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+      "name": "./node_modules/coderjz_utils/index.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\coderjz_utils\\index.js",
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "cacheable": true,
+      "optional": false,
+      "orphan": true,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+      "issuerName": "./src/main.js",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 137,
+        "resolving": 72,
+        "restoring": 0,
+        "building": 65,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 72,
+        "dependencies": 0
+      },
+      "id": null,
+      "issuerId": null,
+      "chunks": [],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony side effect evaluation",
+          "active": false,
+          "explanation": "",
+          "userRequest": "coderjz_utils",
+          "loc": "2:0-45",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony import specifier",
+          "active": false,
+          "explanation": "",
+          "userRequest": "coderjz_utils",
+          "loc": "17:12-20",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "resolvedModule": "./src/main.js",
+          "type": "harmony import specifier",
+          "active": false,
+          "explanation": "",
+          "userRequest": "coderjz_utils",
+          "loc": "18:12-25",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "format",
+        "math"
+      ],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not in any chunk"
+      ],
+      "depth": 1
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 6827,
+      "sizes": {
+        "javascript": 6827
+      },
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+      "name": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+      "index": 2,
+      "preOrderIndex": 2,
+      "index2": 0,
+      "postOrderIndex": 0,
+      "cacheable": true,
+      "optional": false,
+      "orphan": false,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "issuerName": "./src/style.css",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./src/style.css",
+          "profile": {
+            "total": 14,
+            "resolving": 5,
+            "restoring": 0,
+            "building": 9,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 5,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 0,
+        "resolving": 0,
+        "restoring": 0,
+        "building": 0,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 0,
+        "dependencies": 0
+      },
+      "id": 379,
+      "issuerId": null,
+      "chunks": [
+        179
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "1:0-89",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "9:13-16",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "1:0-89",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "loc": "9:13-16",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+          "module": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "moduleName": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\runtime\\injectStylesIntoStyleTag.js",
+          "resolvedModule": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "230:0-14",
+          "moduleId": 379,
+          "resolvedModuleId": 379
+        }
+      ],
+      "usedExports": null,
+      "providedExports": null,
+      "optimizationBailout": [
+        "CommonJS bailout: module.exports is used directly at 230:0-14",
+        "Statement (VariableDeclaration) with side effects in source code at 3:0-17:4",
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 392,
+      "sizes": {
+        "javascript": 392
+      },
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "name": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "index": 3,
+      "preOrderIndex": 3,
+      "index2": 2,
+      "postOrderIndex": 2,
+      "cacheable": true,
+      "optional": false,
+      "orphan": false,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "issuerName": "./src/style.css",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./src/style.css",
+          "profile": {
+            "total": 14,
+            "resolving": 5,
+            "restoring": 0,
+            "building": 9,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 5,
+            "dependencies": 0
+          },
+          "id": null
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 76,
+        "resolving": 1,
+        "restoring": 0,
+        "building": 75,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 1,
+        "dependencies": 0
+      },
+      "id": 426,
+      "issuerId": null,
+      "chunks": [
+        179
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "2:12-87",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "9:17-24",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js|aecd86213e5ac9518d585c470a003a0f",
+          "module": "./src/main.js + 3 modules",
+          "moduleName": "./src/main.js + 3 modules",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "13:15-29",
+          "moduleId": 314,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "2:12-87",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "9:17-24",
+          "moduleId": null,
+          "resolvedModuleId": null
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./src/style.css",
+          "moduleName": "./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "!!../node_modules/css-loader/dist/cjs.js!./style.css",
+          "loc": "13:15-29",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": [
+        "default"
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+        "Statement (VariableDeclaration) with side effects in source code at 3:0-84",
+        "ModuleConcatenation bailout: Module uses module.id"
+      ],
+      "depth": 2
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "layer": null,
+      "size": 1605,
+      "sizes": {
+        "javascript": 1605
+      },
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+      "name": "./node_modules/css-loader/dist/runtime/api.js",
+      "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+      "index": 4,
+      "preOrderIndex": 4,
+      "index2": 1,
+      "postOrderIndex": 1,
+      "cacheable": true,
+      "optional": false,
+      "orphan": false,
+      "issuer": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+      "issuerName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+      "issuerPath": [
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\main.js",
+          "name": "./src/main.js",
+          "profile": {
+            "total": 752,
+            "resolving": 145,
+            "restoring": 0,
+            "building": 607,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 145,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\style-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./src/style.css",
+          "profile": {
+            "total": 14,
+            "resolving": 5,
+            "restoring": 0,
+            "building": 9,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 5,
+            "dependencies": 0
+          },
+          "id": null
+        },
+        {
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "name": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "profile": {
+            "total": 76,
+            "resolving": 1,
+            "restoring": 0,
+            "building": 75,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 1,
+            "dependencies": 0
+          },
+          "id": 426
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "profile": {
+        "total": 0,
+        "resolving": 0,
+        "restoring": 0,
+        "building": 0,
+        "integration": 0,
+        "storing": 0,
+        "additionalResolving": 0,
+        "additionalIntegration": 0,
+        "factory": 0,
+        "dependencies": 0
+      },
+      "id": 705,
+      "issuerId": 426,
+      "chunks": [
+        179
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "module": "./node_modules/css-loader/dist/runtime/api.js",
+          "moduleName": "./node_modules/css-loader/dist/runtime/api.js",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\babel-loader\\lib\\index.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\runtime\\api.js",
+          "resolvedModule": "./node_modules/css-loader/dist/runtime/api.js",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "9:0-14",
+          "moduleId": 705,
+          "resolvedModuleId": 705
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+          "loc": "2:0-89",
+          "moduleId": 426,
+          "resolvedModuleId": 426
+        },
+        {
+          "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "module": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "moduleName": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\css-loader\\dist\\cjs.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\src\\style.css",
+          "resolvedModule": "./node_modules/css-loader/dist/cjs.js!./src/style.css",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "../node_modules/css-loader/dist/runtime/api.js",
+          "loc": "3:30-57",
+          "moduleId": 426,
+          "resolvedModuleId": 426
+        }
+      ],
+      "usedExports": null,
+      "providedExports": null,
+      "optimizationBailout": [
+        "CommonJS bailout: module.exports is used directly at 9:0-14",
+        "Statement (ExpressionStatement) with side effects in source code at 9:0-66:2",
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 3
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "layer": null,
+      "size": 267,
+      "sizes": {
+        "runtime": 267
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "webpack/runtime/compat get default export",
+      "name": "webpack/runtime/compat get default export",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        666
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "layer": null,
+      "size": 308,
+      "sizes": {
+        "runtime": 308
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "webpack/runtime/define property getters",
+      "name": "webpack/runtime/define property getters",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        666
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "layer": null,
+      "size": 88,
+      "sizes": {
+        "runtime": 88
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "webpack/runtime/hasOwnProperty shorthand",
+      "name": "webpack/runtime/hasOwnProperty shorthand",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        666
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "layer": null,
+      "size": 2573,
+      "sizes": {
+        "runtime": 2573
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "identifier": "webpack/runtime/jsonp chunk loading",
+      "name": "webpack/runtime/jsonp chunk loading",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        666
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    }
+  ],
+  "entrypoints": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        666,
+        179
+      ],
+      "assets": [
+        {
+          "name": "js/runtime.4b1f57.bundle.js",
+          "size": 1012
+        },
+        {
+          "name": "js/main.01ef5d.bundle.js",
+          "size": 3693
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 4705,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    },
+    "index": {
+      "name": "index",
+      "chunks": [
+        666,
+        826
+      ],
+      "assets": [
+        {
+          "name": "js/runtime.4b1f57.bundle.js",
+          "size": 1012
+        },
+        {
+          "name": "js/index.b82803.bundle.js",
+          "size": 134
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 1146,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        666,
+        179
+      ],
+      "assets": [
+        {
+          "name": "js/runtime.4b1f57.bundle.js",
+          "size": 1012
+        },
+        {
+          "name": "js/main.01ef5d.bundle.js",
+          "size": 3693
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 4705,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    },
+    "index": {
+      "name": "index",
+      "chunks": [
+        666,
+        826
+      ],
+      "assets": [
+        {
+          "name": "js/runtime.4b1f57.bundle.js",
+          "size": 1012
+        },
+        {
+          "name": "js/index.b82803.bundle.js",
+          "size": 134
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 1146,
+      "auxiliaryAssets": [],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "errors": [],
+  "errorsCount": 0,
+  "warnings": [],
+  "warningsCount": 0,
+  "children": [
+    {
+      "name": "HtmlWebpackCompiler",
+      "hash": "a0548ab84c96c6e981f0",
+      "version": "5.23.0",
+      "time": 144,
+      "builtAt": 1655622872060,
+      "publicPath": "",
+      "outputPath": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\build",
+      "assetsByChunkName": {},
+      "assets": [],
+      "chunks": [
+        {
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "recorded": false,
+          "size": 1414,
+          "sizes": {
+            "javascript": 998,
+            "runtime": 416
+          },
+          "names": [
+            "HtmlWebpackPlugin_0-0"
+          ],
+          "idHints": [],
+          "runtime": [
+            "HtmlWebpackPlugin_0-0"
+          ],
+          "files": [],
+          "auxiliaryFiles": [],
+          "hash": "0d07b8101ac86701e1df",
+          "childrenByOrder": {},
+          "id": 563,
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "modules": [
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "layer": null,
+              "size": 921,
+              "sizes": {
+                "javascript": 921
+              },
+              "built": true,
+              "codeGenerated": true,
+              "cached": false,
+              "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+              "name": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+              "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+              "index": 1,
+              "preOrderIndex": 1,
+              "index2": 1,
+              "postOrderIndex": 1,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "issuer": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 0,
+                "resolving": 0,
+                "restoring": 0,
+                "building": 0,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 0,
+                "dependencies": 0
+              },
+              "id": 614,
+              "issuerId": null,
+              "chunks": [
+                563
+              ],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+                  "module": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                  "moduleName": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                  "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+                  "resolvedModule": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+                  "type": "cjs self exports reference",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": null,
+                  "loc": "1:119-133",
+                  "moduleId": 614,
+                  "resolvedModuleId": 614
+                },
+                {
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "resolvedModuleIdentifier": null,
+                  "resolvedModule": null,
+                  "type": "entry",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+                  "loc": "HtmlWebpackPlugin_0-0",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "resolvedModuleIdentifier": null,
+                  "resolvedModule": null,
+                  "type": null,
+                  "active": true,
+                  "explanation": "used as library export",
+                  "userRequest": null,
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": null,
+              "providedExports": null,
+              "optimizationBailout": [
+                "CommonJS bailout: module.exports is used directly at 1:119-133",
+                "Statement (VariableDeclaration) with side effects in source code at 1:0-119",
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 0
+            },
+            {
+              "type": "module",
+              "moduleType": "javascript/esm",
+              "layer": null,
+              "size": 77,
+              "sizes": {
+                "javascript": 77
+              },
+              "built": true,
+              "codeGenerated": true,
+              "cached": false,
+              "identifier": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+              "name": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+              "nameForCondition": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+              "index": 0,
+              "preOrderIndex": 0,
+              "index2": 0,
+              "postOrderIndex": 0,
+              "cacheable": true,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "issuer": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "profile": {
+                "total": 22,
+                "resolving": 7,
+                "restoring": 0,
+                "building": 15,
+                "integration": 0,
+                "storing": 0,
+                "additionalResolving": 0,
+                "additionalIntegration": 0,
+                "factory": 7,
+                "dependencies": 0
+              },
+              "id": 295,
+              "issuerId": null,
+              "chunks": [
+                563
+              ],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "resolvedModuleIdentifier": null,
+                  "resolvedModule": null,
+                  "type": "entry",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+                  "loc": "HtmlWebpackPlugin_0-0",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": [],
+              "providedExports": [],
+              "optimizationBailout": [
+                "Statement (ExpressionStatement) with side effects in source code at 1:0-77"
+              ],
+              "depth": 0
+            },
+            {
+              "type": "module",
+              "moduleType": "runtime",
+              "layer": null,
+              "size": 88,
+              "sizes": {
+                "runtime": 88
+              },
+              "built": false,
+              "codeGenerated": true,
+              "cached": false,
+              "identifier": "webpack/runtime/hasOwnProperty shorthand",
+              "name": "webpack/runtime/hasOwnProperty shorthand",
+              "nameForCondition": null,
+              "index": null,
+              "preOrderIndex": null,
+              "index2": null,
+              "postOrderIndex": null,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "id": "",
+              "chunks": [
+                563
+              ],
+              "assets": [],
+              "reasons": [],
+              "usedExports": null,
+              "providedExports": [],
+              "optimizationBailout": [],
+              "depth": null
+            },
+            {
+              "type": "module",
+              "moduleType": "runtime",
+              "layer": null,
+              "size": 27,
+              "sizes": {
+                "runtime": 27
+              },
+              "built": false,
+              "codeGenerated": true,
+              "cached": false,
+              "identifier": "webpack/runtime/publicPath",
+              "name": "webpack/runtime/publicPath",
+              "nameForCondition": null,
+              "index": null,
+              "preOrderIndex": null,
+              "index2": null,
+              "postOrderIndex": null,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "id": "",
+              "chunks": [
+                563
+              ],
+              "assets": [],
+              "reasons": [],
+              "usedExports": null,
+              "providedExports": [],
+              "optimizationBailout": [],
+              "depth": null
+            },
+            {
+              "type": "module",
+              "moduleType": "runtime",
+              "layer": null,
+              "size": 301,
+              "sizes": {
+                "runtime": 301
+              },
+              "built": false,
+              "codeGenerated": true,
+              "cached": false,
+              "identifier": "webpack/runtime/require chunk loading",
+              "name": "webpack/runtime/require chunk loading",
+              "nameForCondition": null,
+              "index": null,
+              "preOrderIndex": null,
+              "index2": null,
+              "postOrderIndex": null,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "id": "",
+              "chunks": [
+                563
+              ],
+              "assets": [],
+              "reasons": [],
+              "usedExports": null,
+              "providedExports": [],
+              "optimizationBailout": [],
+              "depth": null
+            }
+          ],
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0-0",
+              "request": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html"
+            },
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0-0",
+              "request": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;"
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/esm",
+          "layer": null,
+          "size": 77,
+          "sizes": {
+            "javascript": 77
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+          "name": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+          "nameForCondition": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 0,
+          "postOrderIndex": 0,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 22,
+            "resolving": 7,
+            "restoring": 0,
+            "building": 15,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 7,
+            "dependencies": 0
+          },
+          "id": 295,
+          "issuerId": null,
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;",
+              "loc": "HtmlWebpackPlugin_0-0",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": [],
+          "providedExports": [],
+          "optimizationBailout": [
+            "Statement (ExpressionStatement) with side effects in source code at 1:0-77"
+          ],
+          "depth": 0
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "layer": null,
+          "size": 921,
+          "sizes": {
+            "javascript": 921
+          },
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+          "name": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+          "nameForCondition": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+          "index": 1,
+          "preOrderIndex": 1,
+          "index2": 1,
+          "postOrderIndex": 1,
+          "cacheable": true,
+          "optional": false,
+          "orphan": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "profile": {
+            "total": 0,
+            "resolving": 0,
+            "restoring": 0,
+            "building": 0,
+            "integration": 0,
+            "storing": 0,
+            "additionalResolving": 0,
+            "additionalIntegration": 0,
+            "factory": 0,
+            "dependencies": 0
+          },
+          "id": 614,
+          "issuerId": null,
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+              "module": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+              "moduleName": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+              "resolvedModuleIdentifier": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+              "resolvedModule": "./node_modules/html-webpack-plugin/lib/loader.js!./index.html",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "1:119-133",
+              "moduleId": 614,
+              "resolvedModuleId": 614
+            },
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\node_modules\\html-webpack-plugin\\lib\\loader.js!E:\\learn\\learnWebpack\\23_webpack-bundle-alalyse\\index.html",
+              "loc": "HtmlWebpackPlugin_0-0",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": null,
+              "active": true,
+              "explanation": "used as library export",
+              "userRequest": null,
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: module.exports is used directly at 1:119-133",
+            "Statement (VariableDeclaration) with side effects in source code at 1:0-119",
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 88,
+          "sizes": {
+            "runtime": 88
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/hasOwnProperty shorthand",
+          "name": "webpack/runtime/hasOwnProperty shorthand",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 27,
+          "sizes": {
+            "runtime": 27
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/publicPath",
+          "name": "webpack/runtime/publicPath",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "layer": null,
+          "size": 301,
+          "sizes": {
+            "runtime": 301
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "identifier": "webpack/runtime/require chunk loading",
+          "name": "webpack/runtime/require chunk loading",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "optional": false,
+          "orphan": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        }
+      ],
+      "entrypoints": {
+        "HtmlWebpackPlugin_0-0": {
+          "name": "HtmlWebpackPlugin_0-0",
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "filteredAssets": 0,
+          "assetsSize": 0,
+          "auxiliaryAssets": [],
+          "filteredAuxiliaryAssets": 0,
+          "auxiliaryAssetsSize": 0,
+          "children": {},
+          "childAssets": {},
+          "isOverSizeLimit": false
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0-0": {
+          "name": "HtmlWebpackPlugin_0-0",
+          "chunks": [
+            563
+          ],
+          "assets": [],
+          "filteredAssets": 0,
+          "assetsSize": 0,
+          "auxiliaryAssets": [],
+          "filteredAuxiliaryAssets": 0,
+          "auxiliaryAssetsSize": 0,
+          "children": {},
+          "childAssets": {},
+          "isOverSizeLimit": false
+        }
+      },
+      "errors": [],
+      "errorsCount": 0,
+      "warnings": [],
+      "warningsCount": 0,
+      "children": []
+    }
+  ]
+}

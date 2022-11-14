@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            message: 'Hello React',
+          }
+        }
+
+        render() {
+          return React.createElement(
+            "div",
+            null,
+            React.createElement("h2", null, this.state.message),
+            React.createElement(
+              "header",
+              null,
+              React.createElement("img", {
+                src: "http://p1.music.126.net/R-Eg1aZcut8jKYM6UP5fvA==/109951167311919702.jpg?param=140y140",
+                alt: ""
+              }),
+              React.createElement(
+                "nav",
+                null,
+                React.createElement(
+                  "ul",
+                  {
+                    className: "nav-bar"
+                  },
+                  React.createElement("li", null, "home"),
+                  React.createElement("li", null, "about"),
+                  React.createElement("li", null, "conflict")
+                )
+              )
+            ),
+            React.createElement(
+              "main",
+              null,
+              React.createElement("section", null, "section1"),
+              React.createElement("section", null, "section2")
+            ),
+            React.createElement("footer", null, "footer")
+          )
+        }
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>

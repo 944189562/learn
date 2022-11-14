@@ -1,0 +1,55 @@
+/* components/top-list-item/index.wxss */
+.top-list-wrapper {
+  height: 220rpx;
+  margin-bottom: 20rpx;
+  background-color: #f0f0f1;
+  display: flex;
+  border-radius: 12rpx;
+  transform: translateY(0);
+  overflow: hidden;
+}
+
+.top-list-wrapper .left {
+  padding-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.top-list-wrapper .left .title {
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.top-list-wrapper .left .playlist {
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+.left .playlist .artist {
+  color: rgb(168, 168, 168);
+}
+
+.top-list-wrapper .right {
+  width: 220rpx;
+  position: relative;
+}
+
+.top-list-wrapper .right image {
+  width: 100%;
+}
+
+
+.top-list-wrapper .right .playCount {
+  position: absolute;
+  right: 20rpx;
+  bottom: 12rpx;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 6rpx 10rpx;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 12rpx;
+  transform: translateY(0);
+}

@@ -1,0 +1,19 @@
+/* pages/home-music/index.wxss */
+page {
+  padding: 0 20rpx;
+}
+
+/* 圆角兼容 */
+.swiper {
+  border-radius: 10rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.van-search {
+  padding: 10px 0 !important;
+}

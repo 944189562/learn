@@ -1,0 +1,1 @@
+{"version":3,"file":"js/bundle.js","mappings":";;;;;AAAA;;AAEA;AACA;AACA;;AAEA","sources":["webpack://-1_webpack/./src/index.js"],"sourcesContent":["const message = \"hello ESlint\"\r\n\r\nconst foo = (msg) => {\r\n  console.log(msg)\r\n}\r\n\r\nfoo('123')"],"names":[],"sourceRoot":""}

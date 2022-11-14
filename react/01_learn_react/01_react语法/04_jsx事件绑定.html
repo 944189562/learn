@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            message: 'Hello React',
+          }
+          // 生成一个新的函数 btnClick
+          this.btnClick = this.btnClick.bind(this)
+        }
+
+        render() {
+          return (
+            <div>
+              <h2>{this.state.message}</h2>
+              {/* 注意：onClick=func, 没有绑定 this，react内部执行func.apply(undefined, event) */}
+              <button onClick={this.btnClick}>按钮</button>
+              {/* 1. 显示绑定this，缺点：每次都需要绑定 this */}
+              <button onClick={this.btnClick.bind(this)}>按钮</button>
+              <button onClick={this.btnClick.bind(this)}>按钮</button>
+              <button onClick={this.btnClick.bind(this)}>按钮</button>
+              <button onClick={this.btnClick.bind(this)}>按钮</button>
+              <button onClick={this.btnClick.bind(this)}>按钮</button>
+              <br/>
+              {/* constructor中 bind一次 this.btnClick = this.btnClick.bind(this) */}
+              <button onClick={this.btnClick}>按钮</button>
+              <br/>
+              {/* 2. 函数声明箭头函数 */}
+              <button onClick={this.increment}>+1</button>
+              {/* 3. 绑定箭头函数，方便传递参数 */}
+              <button onClick={(e) => this.decrement(e)}>-1</button>
+            </div>
+          )
+        }
+
+        btnClick() {
+          console.log(this)
+          console.log('点击了~')
+        }
+
+        // 箭头函数不绑定 this，this去上层作用查找
+        // ES6中给对象增加属性：class fields
+        increment = () => {
+          console.log(this)
+        }
+
+        decrement(e) {
+          console.log(this, e)
+        }
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圣杯布局</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template: 200px 1fr 200px / auto 1fr 200px;
+            grid-template-areas:
+                'header header header'
+                'sidebar content aside'
+                'footer footer footer';
+        }
+
+        header {
+            /*grid-column: 1 / -1;*/
+            grid-area: header;
+            background: #cccccc;
+        }
+
+        .left {
+            /*grid-column: 1/ 2;*/
+            grid-area: sidebar;
+            background: red;
+        }
+
+        main {
+            /*grid-column: 2/3;*/
+            grid-area: content;
+        }
+
+        .right {
+            /*grid-column: 3/4;*/
+            grid-area: aside;
+            background: blue;
+        }
+
+        footer {
+            /*grid-column: 1 / -1;*/
+            grid-area: footer;
+            background: #cccccc;
+        }
+
+        input[type='checkbox'] {
+            visibility: hidden;
+        }
+
+        .left .content {
+            width: 200px;
+            transition: width 0.5s;
+        }
+
+        input[type=checkbox]:checked + .content {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<header>header</header>
+<div class="left">
+    <label for="close">打开</label>
+    <input type="checkbox" id="close">
+    <div class="content"></div>
+</div>
+<main>
+main
+</main>
+<div class="right">right</div>
+<footer>footer</footer>
+</body>
+</html>

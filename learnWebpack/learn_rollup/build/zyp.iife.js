@@ -1,0 +1,1 @@
+var zyp=function(o,e){"use strict";function l(o){return o&&"object"==typeof o&&"default"in o?o:{default:o}}var n=l(e);var t=function(o){console.log(o)};return t("Hello rollup"),console.log("2022/07/01"),console.log(n.default.join(["123","234"])),o.foo=t,Object.defineProperty(o,"__esModule",{value:!0}),o}({},_);

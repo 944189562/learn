@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../js/vue.js"></script>
+
+    <template id="tm">
+      <h1 :style="{color: '#ff0000', backgroundColor: '#00ff00'}">
+        {{message}}
+      </h1>
+      <h2 v-if="niubi">Vue is niubi!</h2>
+      <h2 v-else>oh no</h2>
+      <ul>
+        <template v-for="(item, index) in fruits" key="index">
+          <li>{{item}}</li>
+        </template>
+      </ul>
+      <div>
+        <h2>{{counter}}</h2>
+        <button @click="increment($event)">+1</button>
+      </div>
+      <custom-input placeholder="message" v-model="searchText"></custom-input>
+      <p>message: {{searchText}}</p>
+      <base-layout>
+        <template #header>
+          <h3>Slot</h3>
+        </template>
+        <template #main="{friends}">
+          <ul>
+            <li v-for="item in friends" :key="item">{{item}}</li>
+          </ul>
+        </template>
+      </base-layout>
+    </template>
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        template: "#tm",
+        data() {
+          return {
+            message: "Hello Vue!",
+            niubi: true,
+            fruits: ["apple", "banner", "peer"],
+            counter: 0,
+            searchText: "",
+          };
+        },
+        // watch: {
+        //   searchText(newVal, oldVal) {
+        //     console.log('new value: ', newVal, 'old value: ', oldVal)
+        //   }
+        // },
+        methods: {
+          increment(evt) {
+            console.log(evt);
+            this.counter++;
+          },
+        },
+        created() {
+          const unwatch = this.$watch("searchText", (newVal, oldVal) => {
+            console.log("new value: ", newVal, "old value: ", oldVal);
+          });
+
+          setTimeout(() => {
+            unwatch();
+          }, 5 * 1000);
+        },
+      });
+
+      app.component("custom-input", {
+        inheritAttrs: false,
+        props: ["modelValue"],
+        emits: ["update:modelValue"],
+        template: `
+          <div>
+            <input v-bind="$attrs" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
+          </div>
+        `,
+      });
+
+      app.component("base-layout", {
+        props: [],
+        emits: [],
+        data() {
+          return {
+            list: ["james", "curry", "kobe"],
+          };
+        },
+        template: `
+          <div class="container">
+            <header>
+              <slot name="header">Header</slot>  
+            </header>
+            <main>
+              <slot name="main" :friends="list">Main</slot>
+            </main>
+            <footer>
+              <slot name="footer">Footer</slot>
+            </footer>
+          </div>
+        `,
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

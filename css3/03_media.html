@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :root{
+            --main-bg-color: #deef00
+        }
+        .box {
+            width: 1200px;
+            height: auto;
+            background: var(--main-bg-color);
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+
+        .box > ul {
+            width: 50%;
+        }
+
+        .box > ul > li {
+            background: wheat;
+            margin: 1em;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .box {
+                width: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>Hello Box</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+</html>

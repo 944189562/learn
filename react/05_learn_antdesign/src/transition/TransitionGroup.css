@@ -1,0 +1,12 @@
+.user-enter {
+  opacity: 0;
+}
+
+.user-enter-active {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.user-enter-done {
+  color: red;
+}

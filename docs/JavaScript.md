@@ -4520,7 +4520,7 @@ if (result.value !== 6) {
   - 这个时候相当于是一种yield的语法糖，只不过会依次迭代这个可迭代对象，每次迭代其中的一个值；
 
     ```js
-    yield* arr
+    yield* arr // 是下面for yield 的简写
     
     for (const item of arr) {
        yield item
@@ -4683,11 +4683,11 @@ getData()
 
 #### 异步函数的执行流程
 
-- 异步函数的内部代码执行过程和普通的函数是一致的，默认情况下也是会被同步执行。 
+- 异步函数的内部代码执行过程和普通的函数是一致的，默认情况下也是会被同步执行。
 - 异步函数有返回值时，和普通函数会有区别： 
   - 情况一：异步函数也可以有返回值，但是异步函数的返回值会被包裹到Promise.resolve中； 
-  - 情况二：如果我们的异步函数的返回值是Promise，Promise.resolve的状态会由Promise决定； 
-  - 情况三：如果我们的异步函数的返回值是一个对象并且实现了thenable，那么会由对象的then方法来决定； 
+  - 情况二：如果我们的异步函数的返回值是Promise，Promise.resolve的状态会由Promise决定；
+  - 情况三：如果我们的异步函数的返回值是一个对象并且实现了thenable，那么会由对象的then方法来决定；
 - 如果我们在async中抛出了异常，那么程序它并不会像普通函数一样报错，而是会作为Promise的reject来传递；
 
 ```js
@@ -5432,10 +5432,10 @@ import.meta是一个给JavaScript模块暴露特定上下文的元数据属性�
 
 #### ES Module的解析流程
 
-- ES Module 加载js文件的过程是编译（解析）时加载的，并且是异步的
-- 异步的意味着：JS引擎在遇到import时会去获取这个js文件，但是这个获取的过程是异步的，并不会阻塞主线程继 续执行；
+- ES Module 加载 js文件的过程是编译（解析）时加载的，并且是异步的
+- 异步的意味着：JS引擎在遇到 import时会去获取这个js文件，但是这个获取的过程是异步的，并不会阻塞主线程继续执行；
   - 也就是说设置了 type=module 的代码，相当于在script标签上也加上了 async 属性；
-  - 不会阻塞后面的script代码的执行
+  - 不会阻塞后面的 script代码的执行
 
 - ES Module是如何被浏览器解析并且让模块之间可以相互引用的呢？ 
   - https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
@@ -5467,8 +5467,6 @@ import.meta是一个给JavaScript模块暴露特定上下文的元数据属性�
 module.exports = {
     name:  'jz'
 }
-
-
 ```
 
 

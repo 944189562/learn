@@ -1,0 +1,14 @@
+@import url('./test.css');
+/* 导入对应css */
+@import url('../font/iconfont.css');
+
+.content {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff000066;
+}
+
+.bg-img {
+    background-image: url('../img/nhlt.jpg');
+    background-size: contain;
+}

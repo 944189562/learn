@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_devserver=self.webpackChunkwebpack_devserver||[]).push([[853],{533:(e,r,s)=>{function u(e,r){return e*r}s.r(r),s.d(r,{mul:()=>u})}}]);

@@ -1,0 +1,1 @@
+![image-20220701151543906](Promise.then.assets/image-20220701151543906.png)

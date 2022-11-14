@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RXJS Practice</title>
+  </head>
+  <body>
+    <main>
+      <button id="start">开始新的计数器</button>
+      <button id="count">计数</button>
+      <button id="error">发生错误</button>
+      <button id="complete">完成计数</button>
+      <div id="show" style="display: none">
+        <p>目前状态：<span id="status">start</span></p>
+        <p>目前计数：<span id="currCount">0</span></p>
+        <p>偶数计数：<span id="evenCount">0</span></p>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+    <script>
+      const startEl = document.getElementById("start");
+      const countEl = document.getElementById("count");
+      const errorEl = document.getElementById("error");
+      const completeEl = document.getElementById("complete");
+
+      const statusLabel = document.querySelector("#status");
+      const currCountLabel = document.querySelector("#currCount");
+      const evenCountLabel = document.querySelector("#evenCount");
+
+      // let subscription = null
+
+      // startEl.addEventListener("click", () => {
+      //   show.style.display = "block";
+      //   const evtObservable = rxjs
+      //     .fromEvent(countEl, "click")
+      //     .pipe(rxjs.operators.map((_, index) => index + 1));
+
+      //   subscription = evtObservable.subscribe(
+      //     (count) => (currCount.textContent = count)
+      //   );
+      //   subscription1 = evtObservable
+      //     .pipe(rxjs.operators.filter((count) => count % 2 === 0))
+      //     .subscribe((count) => (evenCount.textContent = count));
+
+      //   subscription.add(subscription1);
+      // });
+
+      // rxjs
+      //   .fromEvent(completeEl, "click")
+      //   .subscribe(() => subscription.unsubscribe());
+
+      let counter = 0;
+      let counter$;
+      let evenCounter$;
+
+      rxjs.fromEvent(startEl, "click").subscribe(() => {
+        counter = 0;
+        counter$ = new rxjs.Subject();
+        evenCounter$ = counter$.pipe(rxjs.operators.filter((data) => data % 2 === 0));
+
+        show.style.display = "block";
+        statusLabel.innerHTML = "开始";
+
+        counter$.subscribe((data) => {
+          currCountLabel.innerHTML = data;
+        });
+
+        evenCounter$.subscribe((data) => {
+          evenCountLabel.innerHTML = data;
+        });
+
+        counter$.next(counter);
+      });
+
+      rxjs.fromEvent(countEl, "click").subscribe(() => {
+        counter$.next(++counter);
+      });
+
+      rxjs.fromEvent(completeEl, 'click').subscribe(() => {
+        counter$.unsubscribe()
+      })
+    </script>
+  </body>
+</html>

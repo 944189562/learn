@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  height: 44px;
+  display: flex;
+  text-align: center;
+  line-height: 44px;
+}
+
+.left, .right {
+  width: 44px;
+  background: aliceblue;
+}
+
+.main {
+  flex: 1;
+  background: azure;
+}

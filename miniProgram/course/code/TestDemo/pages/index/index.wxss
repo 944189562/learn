@@ -1,0 +1,5 @@
+/**index.wxss**/
+.title {
+  color: #f00;
+  font-size: 40rpx; 
+}

@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "home-video",
+          "pathName": "pages/home-video/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "detail-video",
+          "pathName": "pages/detail-video/index",
+          "query": "id=14480854",
+          "scene": null
+        },
+        {
+          "name": "detail-song-menu",
+          "pathName": "pages/detail-songs/index",
+          "query": "id=6954660951&type=menu",
+          "scene": null
+        },
+        {
+          "name": "search-detail",
+          "pathName": "pages/detail-search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "music-player",
+          "pathName": "pages/music-player/index",
+          "query": "id=1842025914",
+          "scene": null
+        },
+        {
+          "name": "home-profile",
+          "pathName": "pages/home-profile/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

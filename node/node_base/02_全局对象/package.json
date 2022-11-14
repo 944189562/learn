@@ -1,0 +1,20 @@
+{
+  "name": "02-global-this",
+  "version": "1.0.0",
+  "description": "",
+  "main": "02_Node中的全局对象.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cowsay": "^1.5.0",
+    "dotenv": "^16.0.1",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^9.0.0",
+    "minimist": "^1.2.6",
+    "progress": "^2.0.3"
+  }
+}

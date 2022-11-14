@@ -1,0 +1,8 @@
+:fullscreen {
+    color: red;
+}
+
+.content {
+    user-select: none;
+    transition: .3s;
+}

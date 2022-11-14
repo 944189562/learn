@@ -4,18 +4,22 @@ Promise.resolve().then(() => {
   // return 4
 
   // 2.return thenable的值
-  return {
-    then: function(resolve) {
-      // 大量的计算
-      resolve(4)
-    }
-  }
+  // return {
+  //   then: function(resolve) {
+  //     // 大量的计算
+  //     resolve(4)
+  //   }
+  // }
 
   // 3.return Promise
   // 不是普通的值, 多加一次微任务
   // Promise.resolve(4), 多加一次微任务
   // 一共多加两次微任务
-  return Promise.resolve(4)
+  // return Promise.resolve(4)
+  return new Promise(resolve => {
+    console.log('test')
+    resolve(4)
+  })
 }).then((res) => {
   console.log(res)
 })

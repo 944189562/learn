@@ -1,0 +1,5 @@
+::1 - - [11/Apr/2022:08:53:28 +0000] "GET /home HTTP/1.1" 200 - "-" "PostmanRuntime/7.29.0"
+::1 - - [11/Apr/2022:08:53:46 +0000] "GET /home HTTP/1.1" 200 - "-" "PostmanRuntime/7.29.0"
+GET /login 404 144 - 3.414 ms
+GET /login 404 144 - 0.530 ms
+GET /login 404 144 - 0.264 ms

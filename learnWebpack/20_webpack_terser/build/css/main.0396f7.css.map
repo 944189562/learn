@@ -1,0 +1,1 @@
+{"version":3,"file":"css/main.0396f7.css","mappings":"AAAA,KACE,qBACF,CAEA,OACE,SACF","sources":["webpack://webpack_devserver/./src/style.css"],"sourcesContent":["body {\n  background-color: blue;\n}\n\n.title {\n  color: red;\n}"],"names":[],"sourceRoot":""}

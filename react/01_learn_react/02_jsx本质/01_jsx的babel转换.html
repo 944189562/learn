@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            message: 'Hello React',
+          }
+        }
+
+        render() {
+          return (
+            <div>
+              <h2>{this.state.message}</h2>
+              <header>
+                <img src="http://p1.music.126.net/R-Eg1aZcut8jKYM6UP5fvA==/109951167311919702.jpg?param=140y140" alt=""/>
+                <nav>
+                  <ul className="nav-bar">
+                    <li>home</li>
+                    <li>about</li>
+                    <li>conflict</li>
+                  </ul>
+                </nav>
+              </header>
+              <main>
+                <section>section1</section>
+                <section>section2</section>
+              </main>
+              <footer>
+                footer
+              </footer>
+            </div>
+          )
+        }
+      }
+
+      ReactDOM.render(<App/>, document.getElementById('app'))
+    </script>
+  </body>
+</html>
