@@ -1,0 +1,9 @@
+<!--components/song-detail-header/index.wxml-->
+<view class="song-detail-header-wrapper">
+  <image class="bg-img" src="{{coverImgUrl}}" mode="aspectFill"></image>
+  <view class="bg-cover"></view>
+  <view class="album">
+    <image class="album-img" src="{{coverImgUrl}}" mode="aspectFill"></image>
+    <view class="album-name">{{name}}</view>
+  </view>
+</view>

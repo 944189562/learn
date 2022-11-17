@@ -1,0 +1,19 @@
+/* pages/detail-songs/index.wxss */
+page {
+  padding: 0 20rpx;
+}
+
+.header {
+  width: 100vw;
+  margin-left: -20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.header .title {
+  padding: 0 20rpx;
+}
+
+.header image {
+  width: 100%;
+}

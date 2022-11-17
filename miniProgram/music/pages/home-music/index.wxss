@@ -13,7 +13,3 @@ page {
 .banner-img {
   width: 100%;
 }
-
-.van-search {
-  padding: 10px 0 !important;
-}

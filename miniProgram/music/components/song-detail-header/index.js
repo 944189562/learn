@@ -1,20 +1,16 @@
-// components/area-header/index.js
+// components/song-detail-header/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    title: {
+    coverImgUrl: {
       type: String,
       value: ''
     },
-    rightText: {
+    name: {
       type: String,
-      value: '更多'
-    },
-    showRight: {
-      type: Boolean,
-      value: true
+      value: ''
     }
   },
 
@@ -29,8 +25,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleMore() {
-      this.triggerEvent('handleMore')
-    }
+
   }
 })

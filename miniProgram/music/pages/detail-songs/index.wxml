@@ -1,0 +1,11 @@
+<!--pages/detail-songs/index.wxml-->
+<block wx:if="{{type === 'ranking'}}">
+  <area-header title="{{name}}" showRight="{{false}}"></area-header>
+</block>
+<block wx:else="{{type === 'songlist'}}">
+  <song-detail-header coverImgUrl="{{coverImgUrl}}" name="{{name}}"></song-detail-header>
+</block>
+
+<block wx:for="{{playlist}}" wx:key="id">
+  <song-item-v2 item="{{item}}" idx="{{index + 1}}"></song-item-v2>
+</block>

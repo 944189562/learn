@@ -1,1 +1,1 @@
-export { rankingStore } from './ranking-store'
+export { rankingStore, RankingMap } from './ranking-store'

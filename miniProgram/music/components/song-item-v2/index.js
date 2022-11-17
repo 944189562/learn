@@ -7,6 +7,10 @@ Component({
     item: {
       type: Object,
       value: {}
+    },
+    idx: {
+      type: Number,
+      value: 0
     }
   },
 

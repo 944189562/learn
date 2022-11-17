@@ -1,0 +1,14 @@
+/* pages/cat-list/index.wxss */
+page {
+  padding: 0 20rpx;
+}
+
+.song-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.song-list-item {
+  width: 30%;
+}

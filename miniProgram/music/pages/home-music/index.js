@@ -4,7 +4,7 @@ import query from '../../utils/query-rect'
 import debounce from '../../utils/debounce'
 
 // 共享数据store
-import { rankingStore } from '../../store/index'
+import { rankingStore, RankingMap } from '../../store/index'
 
 // 防抖处理，立即执行第一次
 const dbQuery = debounce(query, 0, true)
@@ -33,9 +33,9 @@ Page({
     // 巅峰榜
     this.getTopList()
   },
-  onUnload(){
+  onUnload() {
     // rankingStore.offState('hotRanking')
-  },  
+  },
   getPageData() {
     // 轮播图
     getBanner().then(res => {
@@ -58,30 +58,28 @@ Page({
     rankingStore.dispatch('getRankingDataAction')
 
     rankingStore.onState('hotRanking', (res) => {
+      if (!res.id) return
+      console.log(res)
+      const ranking = { ...res, playlist: res?.playlist?.slice(0, 6) }
       this.setData({
-        recommandSongs: res
+        recommandSongs: ranking
       })
     })
+
+    rankingStore.onState('soarRanking', this.getTopList())
+    rankingStore.onState('newRanking', this.getTopList())
+    rankingStore.onState('originalRanking', this.getTopList())
   },
-  async getTopList() {
-    const { list } = await getAllTopList()
-    const topLists = list.slice(0, 3).map(item => ({
-      id: item.id,
-      name: item.name,
-      coverImgUrl: item.coverImgUrl,
-      playCount: item.playCount,
-      playlist: []
-    }))
+  getTopList() {
+    return res => {
+      if (!res.id) return
+      const ranking = { ...res, playlist: res?.playlist?.slice(0, 3) }
+      const topLists = [...this.data.topLists, ranking]
 
-    const topListPm = topLists.map(item => getListDetail(item.id))
-    const SongLists = await Promise.all(topListPm)
-    topLists.forEach((item, idx) => {
-      item.playlist.push(...SongLists[idx].playlist.tracks.slice(0, 3))
-    })
-
-    this.setData({
-      topLists
-    })
+      this.setData({
+        topLists
+      })
+    }
   },
   handleImageLoaded() {
     dbQuery('.banner-img').then(res => {
@@ -94,6 +92,18 @@ Page({
   handleSearchLCick() {
     wx.navigateTo({
       url: '/pages/detail-search/index',
+    })
+  },
+  handleHotSong() {
+    this.navigateToSongsDetail(RankingMap[3])
+  },
+  handleRanking(event) {
+    const idx = event.currentTarget.dataset.idx
+    this.navigateToSongsDetail(RankingMap[idx])
+  },
+  navigateToSongsDetail(ranking) {
+    wx.navigateTo({
+      url: `/pages/detail-songs/index?ranking=${ranking}&type=ranking`,
     })
   }
 })

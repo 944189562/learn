@@ -3,7 +3,6 @@ export default function debounce(fn, delay, immediate = false, callback) {
   let isInvoke = false
 
   const _debounce = function (...args) {
-    console.log(args)
     return new Promise(resolve => {
       if (timer) clearTimeout(timer)
 

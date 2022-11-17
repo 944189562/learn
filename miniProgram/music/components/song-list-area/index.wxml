@@ -1,9 +1,9 @@
 <!--components/song-menu-area/index.wxml-->
-<area-header title="热门歌单"></area-header>
+<area-header title="热门歌单" bind:handleMore="handleMore"></area-header>
 <scroll-view class="song-list" scroll-x>
   <block wx:for="{{list}}" wx:key="id">
     <view class="song-list-item">
-      <song-list-item item="{{item}}"></song-list-item>
+      <song-list-item item="{{item}}" bindtap="handleDetail" data-id="{{item.id}}" data-name="{{item.name}}" data-cover-img-url="{{item.coverImgUrl}}"></song-list-item>
     </view>
   </block>
 </scroll-view>

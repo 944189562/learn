@@ -1,0 +1,15 @@
+<!--pages/cat-list/index.wxml-->
+<van-tabs swipeable sticky animated id="tabs" bind:change="handleChangeTab">
+  <block wx:for="{{catList}}" wx:key="name">
+    <van-tab title="{{item.name}}">
+      <area-header title="{{item.name}}" showRight="{{false}}"></area-header>
+      <view class="song-list">
+        <block wx:for="{{songList}}" wx:key="id">
+          <view class="song-list-item">
+            <song-list-item item="{{item}}" bindtap="handleDetail" data-id="{{item.id}}" data-name="{{item.name}}" data-cover-img-url="{{item.coverImgUrl}}"></song-list-item>
+          </view>
+        </block>
+      </view>
+    </van-tab>
+  </block>
+</van-tabs>

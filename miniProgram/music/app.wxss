@@ -2,3 +2,7 @@
 page {
   box-sizing: border-box;
 }
+
+.van-search {
+  padding: 10px 0 !important;
+}

@@ -1,1 +1,45 @@
 /* pages/detail-search/index.wxss */
+page {
+  padding: 100rpx 20rpx 0;
+}
+
+.search {
+  position: fixed;
+  top: 0;
+  left: 20rpx;
+  right: 20rpx;
+}
+
+.hot .content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30rpx;
+  font-size: 24rpx;
+  padding: 10rpx;
+}
+
+.hot .content .item:first-of-type {
+  color: #26ce8a;
+}
+
+.suggest .title, .result .title {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #26ce8a;
+}
+
+.suggest .item {
+  display: flex;
+  align-items: center;
+  margin-left: -10rpx;
+}
+
+.suggest .item .icon {
+  width: 66rpx;
+}
+
+.suggest .item .keyword {
+  font-size: 28rpx;
+}

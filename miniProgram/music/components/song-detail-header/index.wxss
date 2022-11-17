@@ -1,0 +1,46 @@
+/* components/song-detail-header/index.wxss */
+.song-detail-header-wrapper {
+  margin-left: -20rpx;
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 500rpx;
+}
+
+.bg-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 500rpx;
+  background: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(5px);
+}
+
+.album {
+  width: 100vw;
+  height: 500rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20rpx;
+}
+
+.album-img {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 16rpx;
+}
+
+.album-name {
+  color: #fff;
+}

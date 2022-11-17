@@ -16,7 +16,12 @@ export function getRankings(limit) {
   })
 }
 
-export function getSongList(cat = "全部", limit = 10, offset = 0, order = "hot") {
+export function getCatList() {
+  return request.get('/playlist/hot')
+}
+
+export function getSongList(data = { cat: "全部", limit: 10, offset: 0, order: "hot" }) {
+  const { cat = "全部", limit = 10, offset = 0, order = "hot" } = data
   return request.get('/top/playlist', {
     cat,
     limit,
@@ -29,8 +34,10 @@ export function getAllTopList() {
   return request.get('/toplist')
 }
 
-export function getListDetail(id) {
-  return request.get('/playlist/detail', {
-    id
+export function getListDetail(id, limit = 10, offset = 0) {
+  return request.get('/playlist/track/all', {
+    id,
+    limit,
+    offset
   })
 }
