@@ -779,8 +779,8 @@ Function.prototype.myBind = function(thisArg, ...args) {
 	function proxyFn(...args1) {
 		// 判断当前的 this.__proto__ 是否指向 Fn.prototype
 		// this instanceof Fn 为true，说明new Fn(...args)
-		if(this instanceof proxyFn) {
-			this[key] = fn
+				if(this instanceof proxyFn) {
+				this[key] = fn
             const res = this[key](...args, ...args1)
             delete this[key]
             return res

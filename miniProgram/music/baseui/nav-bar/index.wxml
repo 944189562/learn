@@ -1,0 +1,16 @@
+<!--baseui/nav-bar/index.wxml-->
+<view class="nav-bar-wrapper" style="padding-top: {{statusBarHeight}}px;height:{{navBarHeight}}px">
+  <view class="left">
+    <view class="default-slot">
+      <slot name="left"></slot>
+    </view>
+    <view class="left-arrow">
+      <image class="icon" src="/assets/images/icons/arrow-left.png" mode="widthFix" bindtap="handleBack"/>
+    </view>
+  </view>
+  <view class="content">
+    <slot name="title"></slot>
+  </view>
+  <view class="right">
+  </view>
+</view>

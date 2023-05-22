@@ -62,6 +62,7 @@ class JzPromise {
     return new JzPromise((resolve, reject) => {
       const results = []
       promises.forEach(promise => {
+        // results 顺序可能不一致
         promise.then(res => {
           results.push(res)
           JzPromise.execFnLengthResolve(results, promises, resolve)

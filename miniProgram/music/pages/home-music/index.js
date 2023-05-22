@@ -7,7 +7,7 @@ import debounce from '../../utils/debounce'
 import { rankingStore, RankingMap } from '../../store/index'
 
 // 防抖处理，立即执行第一次
-const dbQuery = debounce(query, 0, true)
+const dbQuery = debounce(query, 0, false)
 
 Page({
 
@@ -59,7 +59,6 @@ Page({
 
     rankingStore.onState('hotRanking', (res) => {
       if (!res.id) return
-      console.log(res)
       const ranking = { ...res, playlist: res?.playlist?.slice(0, 6) }
       this.setData({
         recommandSongs: ranking

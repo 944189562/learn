@@ -26,6 +26,19 @@
 .top-list-wrapper .left .playlist {
   font-size: 26rpx;
   line-height: 40rpx;
+
+  /* 显示一行 */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 1;
+  -moz-box-orient: vertical;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden;
 }
 
 .left .playlist .artist {

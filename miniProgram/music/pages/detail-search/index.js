@@ -42,11 +42,12 @@ Page({
       searchValue
     })
 
-    if (!searchValue) {
+    if (!searchValue.length) {
       this.setData({
         suggestSongs: [],
         resultSongs: []
       })
+      debounceGetSearchSuggest.cancel()
       return
     }
 
