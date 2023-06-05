@@ -28,7 +28,7 @@ tsc --version
   - 通过ts-node库，为TypeScript的运行提供执行环境；
   - 使用ts-node
     - 安装ts-node `npm install ts-node -g`
-    - 外ts-node需要依赖 tslib 和 @types/node 两个包：`npm install tslib @types/node -g`
+    - 另外ts-node需要依赖 tslib 和 @types/node 两个包：`npm install tslib @types/node -g`
     - 现在，我们可以直接通过 ts-node 来运行TypeScript的代码：``
 
 
